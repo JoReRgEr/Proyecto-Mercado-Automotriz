@@ -1,6 +1,6 @@
 """Scraper de anuncios de venta de vehículos en Revolico.
 
-Fase 2 del proyecto ICD Proyecto Mercado.
+Fase 2 y Fase 3.1 del proyecto ICD Proyecto Mercado.
 
 Consulta la búsqueda de carros de Revolico, obtiene el HTML con los
 anuncios (cargados vía SSR + Apollo en el script `__NEXT_DATA__`) y
@@ -12,6 +12,7 @@ Uso:
 
 import argparse
 import json
+import re
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -33,6 +34,25 @@ USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 )
+
+BRAND_REGEX = re.compile(
+    r"\b(" + "|".join(
+        [
+            "hyundai", "kia", "toyota", "nissan", "audi", "honda", "chevrolet",
+            "bmw", "volkswagen", "volvo", "mg", "tesla", "ford", "fiat", "peugeot",
+            "renault", "suzuki", "jeep", "land", "rover", "porsche", "dodge",
+            "chrysler", "mitsubishi", "subaru", "mazda", "geely", "byd", "donga",
+            "bestune", "jac", "proac",
+        ]
+    ) + r")\b",
+    re.IGNORECASE,
+)
+
+CAMPOS_NO_VEHICULO_KEYWORDS = [
+    "bateria", "batería", "pieza", "neumatico", "neumático", "taller", "servicio",
+    "servicios", "transporte", "transport", "mecanico", "mecánica", "mantenimiento",
+    "reparacion", "repa", "accesorio", "accesorios", "llanta", "llantas",
+]
 
 
 def _ahora_iso() -> str:
@@ -82,6 +102,27 @@ def _extraer_anuncios(html: str) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         if anuncio.get("__typename") == "AdType":
             anuncios.append(anuncio)
     return anuncios, estado
+
+
+def _es_vehiculo_principal(anuncio: Dict[str, Any], precio: Any) -> bool:
+    """Determina si el anuncio representa venta de un automóvil completo.
+
+    Reglas de Fase 3.1:
+    - Excluir publicaciones de baterías, piezas, accesorios, neumáticos, servicios.
+    - Excluir títulos genéricos sin marca/modelo que permitan confirmar el vehículo.
+    - Excluir precios simbólicos de 1 USD cuando no existe descripción que confirme precio real.
+    """
+    titulo = (anuncio.get("title") or "").lower()
+    for keyword in CAMPOS_NO_VEHICULO_KEYWORDS:
+        if keyword in titulo:
+            return False
+    if not BRAND_REGEX.search(anuncio.get("title") or ""):
+        return False
+    if precio is None or precio <= 0:
+        return False
+    if precio == 1:
+        return False
+    return True
 
 
 def _normalizar_anuncio(
@@ -137,7 +178,7 @@ def scrape_revolico(
     page_length: int = PAGE_LENGTH,
     delay: float = REQUEST_DELAY_SECONDS,
 ) -> List[Dict[str, Any]]:
-    """Recolecta anuncios de la categoría de carros en Revolico."""
+    """Recolecta anuncios de la categoria de carros en Revolico."""
     anuncios: List[Dict[str, Any]] = []
     vistos: set = set()
     page = 1
@@ -159,6 +200,8 @@ def scrape_revolico(
             if ad.get("id") in vistos:
                 continue
             vistos.add(ad.get("id"))
+            if not _es_vehiculo_principal(ad, ad.get("price")):
+                continue
             anuncios.append(_normalizar_anuncio(ad, estado, _ahora_iso()))
             recolectados_en_pagina += 1
             if len(anuncios) >= max_anuncios:

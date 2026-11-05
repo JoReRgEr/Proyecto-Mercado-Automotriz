@@ -1,8 +1,8 @@
-"""Procesamiento de anuncios de Revolico (Fase 2 y Fase 3).
+"""Procesamiento de anuncios de Revolico (Fase 2 y Fase 3.1).
 
 Lee los datos crudos de `data/raw/anuncios_revolico.json` y prepara una
-versión procesada en `data/processed/anuncios_revolico.json`, conservando
-siempre los campos originales y añadiendo atributos extraídos y trazabilidad.
+version procesada en `data/processed/anuncios_revolico_processed_update.json`,
+con la estructura definitiva del anuncio (Fase 3.1) y atributos extraidos.
 
 Uso:
     python src/process_revolico.py
@@ -14,7 +14,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 RAW_PATH = Path("data/raw/anuncios_revolico.json")
-PROCESSED_FILE = Path("data/processed/anuncios_revolico.json")
+PROCESSED_FILE = Path("data/processed/anuncios_revolico_processed_update.json")
+
+TASA_USD_CUP = 920
 
 BRANDS: Dict[str, str] = {
     "hyundai": "Hyundai",
@@ -167,7 +169,7 @@ def _extraer_motorizacion(texto: str) -> Optional[str]:
 
 
 def _extraer_estado(texto: str) -> Optional[str]:
-    """Detecta el estado del vehiculo con expresiones explicitas."""
+    """Detecta el estado del vehículo con expresiones explícitas."""
     lower = texto.lower()
     if "0km" in lower or "0 km" in lower or "nuevo" in lower:
         return "nuevo"
@@ -189,7 +191,7 @@ def _extraer_atributos(anuncio: Dict[str, Any]) -> List[Dict[str, Any]]:
             "atributo": "marca",
             "valor": marca,
             "fragmento": titulo or descripcion,
-            "nivel_confiencia": "alta",
+            "nivel_confanza": "alta",
         })
 
     modelo = _extraer_modelo(texto, marca)
@@ -198,7 +200,7 @@ def _extraer_atributos(anuncio: Dict[str, Any]) -> List[Dict[str, Any]]:
             "atributo": "modelo",
             "valor": modelo,
             "fragmento": titulo or descripcion,
-            "nivel_confiencia": "media",
+            "nivel_confanza": "media",
         })
 
     anio = _extraer_anio(titulo)
@@ -207,7 +209,7 @@ def _extraer_atributos(anuncio: Dict[str, Any]) -> List[Dict[str, Any]]:
             "atributo": "anio",
             "valor": anio,
             "fragmento": titulo,
-            "nivel_confiencia": "alta",
+            "nivel_confanza": "alta",
         })
 
     tipo_vehiculo = _extraer_tipo_vehiculo(texto)
@@ -216,7 +218,7 @@ def _extraer_atributos(anuncio: Dict[str, Any]) -> List[Dict[str, Any]]:
             "atributo": "tipo_vehiculo",
             "valor": tipo_vehiculo,
             "fragmento": titulo or descripcion,
-            "nivel_confiencia": "alta",
+            "nivel_confanza": "alta",
         })
 
     kilometraje = _extraer_kilometraje(texto)
@@ -225,7 +227,7 @@ def _extraer_atributos(anuncio: Dict[str, Any]) -> List[Dict[str, Any]]:
             "atributo": "kilometraje",
             "valor": kilometraje,
             "fragmento": titulo or descripcion,
-            "nivel_confiencia": "alta",
+            "nivel_confanza": "alta",
         })
 
     transmision = _extraer_transmision(texto)
@@ -234,7 +236,7 @@ def _extraer_atributos(anuncio: Dict[str, Any]) -> List[Dict[str, Any]]:
             "atributo": "transmision",
             "valor": transmision,
             "fragmento": titulo or descripcion,
-            "nivel_confiencia": "alta",
+            "nivel_confanza": "alta",
         })
 
     motorizacion = _extraer_motorizacion(texto)
@@ -243,7 +245,7 @@ def _extraer_atributos(anuncio: Dict[str, Any]) -> List[Dict[str, Any]]:
             "atributo": "tipo_motorizacion",
             "valor": motorizacion,
             "fragmento": titulo or descripcion,
-            "nivel_confiencia": "alta",
+            "nivel_confanza": "alta",
         })
 
     estado = _extraer_estado(texto)
@@ -252,13 +254,13 @@ def _extraer_atributos(anuncio: Dict[str, Any]) -> List[Dict[str, Any]]:
             "atributo": "estado",
             "valor": estado,
             "fragmento": titulo or descripcion,
-            "nivel_confiencia": "media",
+            "nivel_confanza": "media",
         })
 
     return atributos
 
 
-def _nivel_confiencia(atributos: List[Dict[str, Any]], anuncio: Dict[str, Any]) -> str:
+def _calcular_nivel(atributos: List[Dict[str, Any]], anuncio: Dict[str, Any]) -> str:
     """Determina la confianza general del registro de procesamiento."""
     if atributos and anuncio.get("precio_original") is not None:
         return "alta"
@@ -270,22 +272,63 @@ def _nivel_confiencia(atributos: List[Dict[str, Any]], anuncio: Dict[str, Any]) 
 
 
 def procesar_anuncios() -> List[Dict[str, Any]]:
-    """Carga anuncios crudos y genera los procesados con atributos extraidos."""
+    """Carga anuncios crudos y genera la version procesada con nueva estructura."""
     with open(RAW_PATH, "r", encoding="utf-8") as f:
         anuncios: List[Dict[str, Any]] = json.load(f)
 
     procesados: List[Dict[str, Any]] = []
     for anuncio in anuncios:
         atributos = _extraer_atributos(anuncio)
-        registro = dict(anuncio)
-        registro["atributos_extraidos"] = atributos
-        registro["nivel_confiencia"] = _nivel_confiencia(atributos, anuncio)
-        registro["observaciones"] = (
+        valores = {a.get("atributo"): a.get("valor") for a in atributos}
+        nivel = _nivel_confiianza(atributos, anuncio)
+        observaciones = (
             "Descripcion no disponible en el listado de Revolico."
             if not anuncio.get("descripcion_original")
             else None
         )
-        procesados.append(registro)
+
+        precio_anuncio = anuncio.get("precio_original")
+        moneda_anuncio = anuncio.get("moneda_original")
+        precio_MN = None
+        if precio_anuncio is not None:
+            if moneda_anuncio == "USD":
+                precio_MN = precio_anuncio * TASA_USD_CUP
+            elif moneda_anuncio == "CUP":
+                precio_MN = precio_anuncio
+
+        kilometraje = valores.get("kilometraje")
+        unidad_kilometraje = None
+        if kilometraje is not None:
+            unidad_kilometraje = "millas" if "millas" in (anuncio.get("titulo_original") or "").lower() else "km"
+
+        nuevo = {
+            "id_anuncio": anuncio.get("id_anuncio"),
+            "url": anuncio.get("url"),
+            "titulo_original": anuncio.get("titulo_original"),
+            "precio_anuncio": precio_anuncio,
+            "moneda_anuncio": moneda_anuncio,
+            "precio_MN": precio_MN,
+            "ubicacion": anuncio.get("ubicacion"),
+            "marca": valores.get("marca") or anuncio.get("marca"),
+            "modelo": valores.get("modelo") or anuncio.get("modelo"),
+            "tipo_vehiculo": valores.get("tipo_vehiculo") or anuncio.get("tipo_vehiculo"),
+            "anio": valores.get("anio") or anuncio.get("anio"),
+            "estado": valores.get("estado") or anuncio.get("estado"),
+            "tiempo_de_uso_declarado": anuncio.get("tiempo_de_uso_declarado"),
+            "tipo_motorizacion": valores.get("tipo_motorizacion") or anuncio.get("tipo_motorizacion"),
+            "autonomia": anuncio.get("autonomia"),
+            "kilometraje": kilometraje,
+            "unidad_kilometraje": unidad_kilometraje,
+            "transmision": valores.get("transmision") or anuncio.get("transmision"),
+            "detalles_carroceria": anuncio.get("detalles_carroceria"),
+            "detalles_pintura": anuncio.get("detalles_pintura"),
+            "detalles_interior": anuncio.get("detalles_interior"),
+            "accesorios": anuncio.get("accesorios") or [],
+            "problemas_tecnicos": anuncio.get("problemas_tecnicos") or [],
+            "nivel_confanza": nivel,
+            "observaciones": observaciones,
+        }
+        procesados.append(nuevo)
 
     PROCESSED_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(PROCESSED_FILE, "w", encoding="utf-8") as f:

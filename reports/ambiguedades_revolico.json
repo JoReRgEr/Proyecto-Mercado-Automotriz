@@ -11,7 +11,7 @@
     "valor_asignado": 34,
     "motivo_de_la_ambigüedad": "Inconsistencia entre el valor numérico del campo y el texto descriptivo del título.",
     "recomendacion_de_revision": "Verificar la unidad monetaria real del anuncio con la fuente.",
-    "nivel_confiencia": "media"
+    "nivel_confanza": "media"
   },
   {
     "id_anuncio": "58484925",
@@ -24,7 +24,7 @@
     "valor_asignado": null,
     "motivo_de_la_ambigüedad": "Título genérico sin datos de vehículo.",
     "recomendacion_de_revision": "Validar con fuente o descartar del análisis.",
-    "nivel_confiencia": "baja"
+    "nivel_confanza": "baja"
   },
   {
     "id_anuncio": "58103831",
@@ -37,6 +37,6 @@
     "valor_asignado": null,
     "motivo_de_la_ambigüedad": "Contenido no claramente relacionado con venta de vehículo.",
     "recomendacion_de_revision": "Excluir del análisis de vehículos o clasificar por categoría.",
-    "nivel_confiencia": "baja"
+    "nivel_confanza": "baja"
   }
 ]

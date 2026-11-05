@@ -36,7 +36,7 @@ def test_mercado_formal_procesado_valido():
         "marcas_comercializadas", "modelos_disponibles", "tipos_vehiculos",
         "vehiculos_electricos", "informacion_importacion", "precios", "ubicacion",
         "sitio_web", "contacto_publico", "descripcion", "fuentes",
-        "fecha_ultima_verificacion", "nivel_confiencia", "observaciones",
+        "fecha_ultima_verificacion", "nivel_confanza", "observaciones",
     ]
     for registro in registros:
         for campo in campos_esenciales:
@@ -52,7 +52,7 @@ def test_ambiguedades_revolico_validas_y_consistentes():
     for ambiguedad in ambiguedades:
         assert "id_anuncio" in ambiguedad
         assert "atributo_afectado" in ambiguedad
-        assert "nivel_confiencia" in ambiguedad
+        assert "nivel_confanza" in ambiguedad
         assert ambiguedad.get("id_anuncio") in ids_validos
 
 
