@@ -8,20 +8,7 @@
 
 ## Respuestas a las preguntas del cierre de fase
 
-### 1. ¿Qué archivos del repositorio del compañero resultaron útiles?
-
-Del repositorio del compañero (clon temporal en `/tmp/opencode/ICD-Mercado-Automotriz`, sin modificar) se aprovecharon:
-
-- `README.md`: visión general del proyecto, preguntas de investigación y estado de fases.
-- `docs/fuentes.md`: clasificación de fuentes (Revolico informal, comercializadoras formales, entrevistas).
-- `docs/ESTADO_PROYECTO.md`: estado de fases y decisiones previas.
-- `docs/informe_ampliacion_2026-10-26.md`: resultados de la ampliación del scraping.
-- `docs/diccionario_datos.md`, `docs/esquema_datos.md`, `docs/preguntas_investigacion.md`, `docs/guia_campo.md`: esquemas, preguntas y método.
-- `docs/instrumentos/entrevista.md`, `docs/instrumentos/encuesta.md`: instrumentos de campo.
-- `data/raw/comercializadoras/Comercializadoras.txt`, `informe_catalogos.md`, `endpoints_descubiertos.json`, `data/processed/comercializadoras.csv`, `data/tasas_cambio/`: catálogos, precios y tipos de cambio.
-- `data/raw/clasificados/revolico/`: estructura de los scrapes previos (API GraphQL, backups por página).
-
-### 2. ¿Cuántas entidades del Mercado Formal se identificaron?
+### 1. ¿Cuántas entidades del Mercado Formal se identificaron?
 
 Se construyeron **10 entidades** en `data/raw/mercado_formal.json` y `data/processed/mercado_formal.json`:
 
@@ -38,18 +25,18 @@ Se construyeron **10 entidades** en `data/raw/mercado_formal.json` y `data/proce
 
 El resto de comercializadoras detectadas en la auditoría (IMPEXPORT, MULTISERVI, CIMEX, DUNA, CARIBE, etc.) quedaron registradas como no verificables o complementarias.
 
-### 3. ¿Cuántas entidades pudieron verificarse con fuentes?
+### 2. ¿Cuántas entidades pudieron verificarse con fuentes?
 
 - **Verificadas con catálogo/precios accesibles:** BDC ONE, Dongfeng Cuba, MCV Comercial, SASA, DIVEP.
 - **No verificables desde esta red:** la mayoría de dominios `.cu` (IMPEXPORT, CIMEX DTA, PALCO, TRANSIMPORT, TRADEX, etc.) por restricciones de red/firewall; se registró la entidad con `nivel_confiencia` baja y `null` donde corresponda.
 
-### 4. ¿Cuántos anuncios de Revolico se encontraron y procesaron?
+### 3. ¿Cuántos anuncios de Revolico se encontraron y procesaron?
 
 - **30 anuncios recolectados** en `data/raw/anuncios_revolico.json`.
 - **30 anuncios únicos** tras deducción; **0 duplicados**.
 - Todos conservan `id_anuncio`, `url`, `fecha_extraccion`, `fecha_publicacion`, `titulo_original`, `precio_original`, `moneda_original`, `precio_numerico` y `ubicacion`.
 
-### 5. ¿Cuántos anuncios tienen marca, modelo, año, precio y motorización identificados?
+### 4. ¿Cuántos anuncios tienen marca, modelo, año, precio y motorización identificados?
 
 | Atributo | Detectados | Porcentaje | Comentario |
 | --- | ---: | ---: | --- |
@@ -62,7 +49,7 @@ El resto de comercializadoras detectadas en la auditoría (IMPEXPORT, MULTISERVI
 | Kilometraje | 2 | 6.7% | Solo "Millas: 65.000". |
 | Ubicación | 30 | 100% | Municipio/cubierta en texto. |
 
-### 6. ¿Cuáles son las principales ambigüedades?
+### 5. ¿Cuáles son las principales ambigüedades?
 
 Se registraron **3 casos** en `reports/ambiguedades_revolico.json` y `.md`:
 
@@ -70,21 +57,20 @@ Se registraron **3 casos** en `reports/ambiguedades_revolico.json` y `.md`:
 2. Anuncio 58484925 — atributo `marca`: título genérico "CARRO".
 3. Anuncio 58103831 — atributo `tipo_vehiculo`: contenido "Ventas", no claramente vehicular.
 
-### 7. ¿Qué decisiones deben revisar manualmente los integrantes del equipo?
+### 6. ¿Qué decisiones se deben revisar manualmente?
 
 - Unidad monetaria y valor real del anuncio 58603793 (USD vs miles USD).
 - La clasificación `nuevo`/`usado` para anuncios con expresiones como "EN EXCELENTE ESTADO".
 - Los modelos derivados por heurística (p. ej. "Santa Fe", "Civic Sport").
-- Validar los registros con `nivel_confiianza` media/baja antes de usarlos en el EDA.
+- Validar los registros con `nivel_confianza` media/baja antes de usarlos en el EDA.
 
-### 8. ¿Qué problemas técnicos o limitaciones quedan pendientes?
+### 7. ¿Qué problemas técnicos o limitaciones quedan pendientes?
 
 - Las descripciones no están en el payload de listado de Revolico (solo títulos).
 - Ningún anuncio menciona motorización; se requiere scraping por detalle o entrevistas.
 - Extracción heurística de marca/modelo/año (media confianza para modelo).
-- El `meta.total` de la API del compañero fue inconsistente (3547/3917/3952).
 
-### 9. ¿Qué archivos se crearon y modificaron?
+### 8. ¿Qué archivos se crearon y modificaron?
 
 **Creados en Fase 3:**
 
@@ -101,7 +87,7 @@ Se registraron **3 casos** en `reports/ambiguedades_revolico.json` y `.md`:
 - `reports/ambiguedades_revolico.json` / `reports/data_quality_summary.json` / `.md` (regenerados).
 - `tests/test_revolico_data.py`, `tests/test_project_structure.py`, `docs/data_dictionary.md`, `README.md`.
 
-### 10. ¿Qué pruebas se ejecutaron y cuáles fueron sus resultados?
+### 9. ¿Qué pruebas se ejecutaron y cuáles fueron sus resultados?
 
 - Suite local (runner temporal, sin pytest instalado): **10/10 pruebas en verde**, incluyendo:
   - Estructura del proyecto.
