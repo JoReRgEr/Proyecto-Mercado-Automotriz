@@ -11,7 +11,6 @@ Instrucciones para agentes de IA (y desarrolladores) trabajando en este reposito
 
 ## Estructura de carpetas
 
-```
 data/raw/           # Salida del scraper (JSON con anuncios originales)
 data/processed/     # JSON limpio y estructurado
 reports/figures/    # Gráficas del EDA
@@ -19,7 +18,6 @@ src/                # Código fuente (scraper, procesamiento, EDA, DB)
 notebooks/          # Notebooks de Jupyter
 docs/               # Documentación
 tests/              # Pruebas
-```
 
 ## Convenciones
 

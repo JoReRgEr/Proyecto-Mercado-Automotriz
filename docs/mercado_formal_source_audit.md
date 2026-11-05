@@ -1,7 +1,7 @@
 # Auditoría de Fuentes — Mercado Formal (repositorio del compañero)
 
 **Proyecto:** ICD Proyecto Mercado — Fase 3.
-**Repositorio auditado:** https://github.com/aRandomFool/ICD-Mercado-Automotriz (clon local temporal en `/tmp/opencode/ICD-Mercado-Automotriz`, sin modificar).
+**Repositorio auditado:** <https://github.com/aRandomFool/ICD-Mercado-Automotriz> (clon local temporal en `/tmp/opencode/ICD-Mercado-Automotriz`, sin modificar).
 
 ## Objetivo
 
@@ -10,7 +10,7 @@ Identificar la información contenida en el repositorio del compañero que sea a
 ## Archivos relevantes encontrados
 
 | Archivo / carpeta | Tipo | Utilidad para el Mercado Formal |
-|---|---|---|
+| --- | --- | --- |
 | `README.md` | Documento | Visión general, 7 etapas, fuentes, estado de capturas. |
 | `docs/fuentes.md` | Documento | Fuentes principales: Revolico (informal), comercializadoras (formal), entrevistas. |
 | `docs/ESTADO_PROYECTO.md` | Documento | Estado de fases, resultados del EDA, decisiones acordadas. |
@@ -37,7 +37,7 @@ Identificar la información contenida en el repositorio del compañero que sea a
 ## Entidades identificadas para el Mercado Formal
 
 | Entidad | Tipo | Estado / verificación |
-|---|---|---|
+| --- | --- | --- |
 | BDC ONE | Concesionario (autos 0km) | ✅ Activa, catálogo con precios (EUR). |
 | Dongfeng Cuba | Distribuidor oficial | ✅ Activa, catálogo con precios (EUR). |
 | MCV Comercial, S.A. | Comercializadora | ✅ Activa, tienda virtual; catálogo (repuestos). |

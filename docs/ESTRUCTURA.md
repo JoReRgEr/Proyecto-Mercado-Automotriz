@@ -1,6 +1,5 @@
 # Estructura del proyecto ICD Proyecto Mercado
 
-```
 Proyecto-Mercado-Automotriz/
 ├── data/
 │   ├── raw/          # Anuncios scrapeados de páginas informales (JSON)
@@ -14,7 +13,6 @@ Proyecto-Mercado-Automotriz/
 ├── README.md
 ├── AGENTS.md
 └── requirements.txt
-```
 
 - **`data/raw/`**: Salida del scraper. Un JSON por página o fuente con los anuncios originales.
 - **`data/processed/`**: JSON con anuncios, concesionarios y entrevistas ya normalizados y limpios.

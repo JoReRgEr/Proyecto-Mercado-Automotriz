@@ -52,7 +52,7 @@ El resto de comercializadoras detectadas en la auditoría (IMPEXPORT, MULTISERVI
 ### 5. ¿Cuántos anuncios tienen marca, modelo, año, precio y motorización identificados?
 
 | Atributo | Detectados | Porcentaje | Comentario |
-|---|---:|---:|---|
+| --- | ---: | ---: | --- |
 | Marca | 16 | 53.3% | Expresiones tipo "Hyundai Elantra 2019". |
 | Modelo | 15 | 50.0% | Heurística: primer token significativo tras la marca. |
 | Año | 16 | 53.3% | Años en títulos (2019, 2022, ...). |
