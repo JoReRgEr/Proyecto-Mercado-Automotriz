@@ -1,0 +1,20 @@
+{
+  "fuente": "revolico",
+  "muestra": "30 anuncios recolectados",
+  "total_anuncios": 30,
+  "total_unicos": 30,
+  "porcentajes_sobre_registros_reales": {
+    "marca": 53.3,
+    "modelo": 50.0,
+    "anio": 53.3,
+    "precio": 93.3,
+    "moneda": 93.3,
+    "ubicacion": 100.0
+  },
+  "con_motorizacion_conocida": 0,
+  "cantidad_vehiculos_nuevos": 1,
+  "cantidad_vehiculos_usados": 0,
+  "cantidad_vehiculos_desconocidos": 29,
+  "cantidad_ambiguidades": 3,
+  "entidades_mercado_formal": 10
+}

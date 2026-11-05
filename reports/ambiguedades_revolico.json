@@ -1,0 +1,42 @@
+[
+  {
+    "id_anuncio": "58603793",
+    "titulo": "Kia Sportage 2022",
+    "atributo_afectado": "precio",
+    "fragmento_problematico": "Precio: 34.000 USD",
+    "interpretaciones_posibles": [
+      "34 USD (valor numérico del campo precio_original)",
+      "34.000 USD (precio expresado textualmente en el título)"
+    ],
+    "valor_asignado": 34,
+    "motivo_de_la_ambigüedad": "Inconsistencia entre el valor numérico del campo y el texto descriptivo del título.",
+    "recomendacion_de_revision": "Verificar la unidad monetaria real del anuncio con la fuente.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "58484925",
+    "titulo": "CARRO",
+    "atributo_afectado": "marca",
+    "fragmento_problematico": "CARRO",
+    "interpretaciones_posibles": [
+      "Sin información de marca"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambigüedad": "Título genérico sin datos de vehículo.",
+    "recomendacion_de_revision": "Validar con fuente o descartar del análisis.",
+    "nivel_confiencia": "baja"
+  },
+  {
+    "id_anuncio": "58103831",
+    "titulo": "Ventas",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Ventas",
+    "interpretaciones_posibles": [
+      "Anuncio no claramente vehicular"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambigüedad": "Contenido no claramente relacionado con venta de vehículo.",
+    "recomendacion_de_revision": "Excluir del análisis de vehículos o clasificar por categoría.",
+    "nivel_confiencia": "baja"
+  }
+]

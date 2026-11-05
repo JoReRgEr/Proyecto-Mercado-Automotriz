@@ -1,0 +1,11 @@
+Tema: *. Modernizacion del automovil en Cuba(enfoque: La Habana), 
+      *. Quedó atras la epoca de los autos clasicos? 
+      *. Cual es el tipo de automovil moderno que mas recorre las calles hoy en dia(cual es el que mas se importa)
+      *. El uso del coche electrico actualmente(ventaja o problema extra)
+      *. Como afecta esta llegada de nuevas marcas al mercado informal cubano.
+Datos: 
+     _Scraping: Revolico
+     _Mercado Formal: Empresas, Concesionarios, Importadoras
+     _Entrevista: Personas
+
+

@@ -1,0 +1,180 @@
+[
+  {
+    "id_registro": "BDC_ONE",
+    "nombre_original": "BDC ONE",
+    "tipo_entidad_original": "Concesionario de autos 0km (MG, Maxus, Mitsubishi)",
+    "descripcion_original": "Concesionario de autos 0km (MG, Maxus, Mitsubishi). Precios en EUR. Catálogo: https://bdcone.online/autos/.",
+    "marcas_mencionadas": ["MG", "Maxus", "Mitsubishi"],
+    "modelos_mencionados": [],
+    "precios_originales": [
+      {
+        "fuente": "https://bdcone.online/autos/",
+        "moneda": "EUR",
+        "detalle": "13 modelos 0km con precios públicos"
+      }
+    ],
+    "ubicacion_original": null,
+    "contacto_publico": null,
+    "url_fuente": "https://bdcone.online",
+    "nombre_fuente": "Comercializadoras autorizadas (informe_catalogos.md)",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "Concesionario de autos 0km (MG, Maxus, Mitsubishi). Precios en EUR. Catálogo: https://bdcone.online/autos/.",
+    "observaciones": "Entidad verificada activa con catálogo de precios públicos. Precio en EUR."
+  },
+  {
+    "id_registro": "DONGFENG_CUBA",
+    "nombre_original": "Dongfeng Cuba",
+    "tipo_entidad_original": "Distribuidor oficial Dongfeng",
+    "descripcion_original": "Distribuidor oficial Dongfeng. Catálogo: https://dongfengqba.com/catalogo/. Precios de referencia en EUR por modelo.",
+    "marcas_mencionadas": ["Dongfeng"],
+    "modelos_mencionados": [],
+    "precios_originales": [
+      {
+        "fuente": "https://dongfengqba.com/catalogo/",
+        "moneda": "EUR",
+        "detalle": "27 modelos de referencia"
+      }
+    ],
+    "ubicacion_original": null,
+    "contacto_publico": null,
+    "url_fuente": "https://dongfengqba.com",
+    "nombre_fuente": "Comercializadoras autorizadas",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "Distribuidor oficial Dongfeng. Catálogo: https://dongfengqba.com/catalogo/. Precios de referencia en EUR por modelo.",
+    "observaciones": "Activo; SSG (sitio estático generado); catálogo con 27 modelos."
+  },
+  {
+    "id_registro": "MCV_COMERCIAL",
+    "nombre_original": "MCV Comercial, S.A.",
+    "tipo_entidad_original": "Comercializadora (venta, renta, leasing, mantenimiento, suministro de partes, piezas y accesorios)",
+    "descripcion_original": "MCV Comercial se dedica a la venta, renta, leasing, mantenimiento y suministro de partes, piezas y accesorios para vehículos. Autorizada para importar y comercializar vehículos y sus componentes. Tienda virtual: https://tienda.mcvcommercial.com/. Catálogo: catalogos/catalogo_mcv.csv (426 productos con precio USD; repuestos/piezas/neumáticos/herramientas/lubricantes; NO incluye vehículos completos).",
+    "marcas_mencionadas": [],
+    "modelos_mencionados": [],
+    "precios_originales": [
+      {
+        "fuente": "https://tienda.mcvcommercial.com/",
+        "moneda": "USD",
+        "detalle": "426 productos con precio USD (principalmente repuestos/piezas)"
+      }
+    ],
+    "ubicacion_original": "Intersección de Vía Blanca y Vía Monumental, Berroa, Municipio Habana del Este, La Habana.",
+    "contacto_publico": "mcv@mcvcomercial.cu; info.cliente@mcvcomercial.cu",
+    "url_fuente": "https://mcvcommercial.com",
+    "nombre_fuente": "Comercializadoras autorizadas + endpoints_descubiertos.json",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "MCV Comercial, S.A. se dedica a la venta, renta, leasing, mantenimiento y suministro de partes, piezas y accesorios para vehículos.",
+    "observaciones": "Catálogo con precios es de repuestos; sin precios de vehículos completos en el catálogo extraído."
+  },
+  {
+    "id_registro": "SASA",
+    "nombre_original": "Servicios Automotores, S.A. (SASA)",
+    "tipo_entidad_original": "Comercializadora",
+    "descripcion_original": "Especializada en la comercialización de productos y servicios automotores. Red nacional de agencias, talleres y tiendas. Autorizada para importar y comercializar vehículos y sus componentes. Web: sasa.com.cu. Tienda virtual: Zonautoshop. Sin precios públicos en línea.",
+    "marcas_mencionadas": [],
+    "modelos_mencionados": [],
+    "precios_originales": [],
+    "ubicacion_original": "Avenida 1ra No. 2602, entre 26 y 28, Miramar, municipio Playa, La Habana.",
+    "contacto_publico": "+53 7206 9952; temporal +53 7206 9559",
+    "url_fuente": "https://sasa.com.cu",
+    "nombre_fuente": "Comercializadoras autorizadas",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "Servicios Automotores, S.A. (SASA) es una sociedad mercantil cubana especializada en la comercialización de productos y servicios automotores.",
+    "observaciones": "Activa; sin catálogo de precios."
+  },
+  {
+    "id_registro": "DIVEP",
+    "nombre_original": "Empresa Comercializadora DIVEP",
+    "tipo_entidad_original": "Comercializadora (comercializa vehículos fabricados por la industria nacional)",
+    "descripcion_original": "Empresa destinada a comercializar vehículos fabricados por la industria nacional. Portal: portal-divep.xutil.cu/es/ofertas. Sin precios públicos.",
+    "marcas_mencionadas": [],
+    "modelos_mencionados": [],
+    "precios_originales": [],
+    "ubicacion_original": "Calle Galiano No. 213, entre Concordia y Virtudes, municipio Centro Habana, La Habana.",
+    "contacto_publico": "+53 7861 7513; comerciales +53 5209 8433 / +53 5212 8086",
+    "url_fuente": "https://portal-divep.xutil.cu",
+    "nombre_fuente": "Comercializadoras autorizadas",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "Empresa destinada a comercializar vehículos fabricados por la industria nacional.",
+    "observaciones": "Activa; sin precios públicos; comercializa vehículos de industria nacional."
+  },
+  {
+    "id_registro": "IMPEXPORT",
+    "nombre_original": "IMPEXPORT, S.U.R.L.",
+    "tipo_entidad_original": "Importadora y comercializadora de bienes (vehículos y componentes)",
+    "descripcion_original": "Sociedad mercantil cubana que presta servicios de importación y exportación de bienes. Está autorizada tanto para importar como para comercializar vehículos y sus componentes. Web: impexport.cu. Sin catálogo de precios verificado (archivo Odoo de servicios).",
+    "marcas_mencionadas": [],
+    "modelos_mencionados": [],
+    "precios_originales": [],
+    "ubicacion_original": "Calle 5ta B, Inmobiliaria Almendares, Oficina No. 60, Miramar. Municipio Playa, La Habana.",
+    "contacto_publico": "+53 7204 7633 / +53 5091 3604 / +53 5987 7018",
+    "url_fuente": "https://impexport.cu",
+    "nombre_fuente": "Comercializadoras autorizadas",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "IMPEXPORT, S.U.R.L. es una sociedad mercantil cubana que presta servicios de importación y exportación de bienes.",
+    "observaciones": "No verificable desde esta red (firewall); sin catálogo de precios."
+  },
+  {
+    "id_registro": "CIMEX_DTA",
+    "nombre_original": "Corporación CIMEX, S.A. División de Transporte Automotor",
+    "tipo_entidad_original": "Comercializadora (división de transporte automotor)",
+    "descripcion_original": "La División de Transporte Automotor de CIMEX presta servicios de comercialización, reparación y mantenimiento de vehículos, así como venta de partes, piezas y accesorios. CIMEX está autorizada para importar y comercializar vehículos y sus componentes. Web: dta.cimex.com.cu. No verificable (NXDOMAIN).",
+    "marcas_mencionadas": [],
+    "modelos_mencionados": [],
+    "precios_originales": [],
+    "ubicacion_original": "Calle 20, entre 1ra y 3ra, Miramar. Municipio Playa, La Habana.",
+    "contacto_publico": "+53 7204 0834; atención al cliente 800 00724",
+    "url_fuente": "https://dta.cimex.com.cu",
+    "nombre_fuente": "Comercializadoras autorizadas + informe_catalogos.md",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "La División de Transporte Automotor de CIMEX presta servicios de comercialización, reparación y mantenimiento de vehículos.",
+    "observaciones": "No verificable (NXDOMAIN en esta red); sin catálogo de precios."
+  },
+  {
+    "id_registro": "PALCO",
+    "nombre_original": "Empresa Importadora PALCO",
+    "tipo_entidad_original": "Importadora (Grupo Empresarial PALCO)",
+    "descripcion_original": "La Empresa Importadora PALCO, perteneciente al Grupo Empresarial PALCO, realiza operaciones de importación de mercancías. Conforme a la autorización vigente, puede importar y comercializar vehículos y sus componentes. Web: palco.cu. No verificable (SPA / firewall).",
+    "marcas_mencionadas": [],
+    "modelos_mencionados": [],
+    "precios_originales": [],
+    "ubicacion_original": "Calle 17 D No. 16425, entre 164 y 17 P, reparto Cubanacán, municipio Playa, La Habana.",
+    "contacto_publico": "+53 7208 0653; importadora +53 7208 0132",
+    "url_fuente": "https://palco.cu",
+    "nombre_fuente": "Comercializadoras autorizadas",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "La Empresa Importadora PALCO, perteneciente al Grupo Empresarial PALCO, realiza operaciones de importación de mercancías.",
+    "observaciones": "No verificable desde esta red (SPA); importadora con alcance en vehículos."
+  },
+  {
+    "id_registro": "TRANSIMPORT",
+    "nombre_original": "Empresa Central de Abastecimiento y Venta de Equipos de Transporte Pesado y sus Piezas (TRANSIMPORT)",
+    "tipo_entidad_original": "Importadora (transporte pesado, vehículos y piezas)",
+    "descripcion_original": "TRANSIMPORT se especializa en la importación y comercialización de equipos de transporte pesado, vehículos, piezas, agregados y componentes. Autorizada para importar y comercializar vehículos y sus componentes. Web: transimport.co.cu. Sin catálogo de precios.",
+    "marcas_mencionadas": [],
+    "modelos_mencionados": [],
+    "precios_originales": [],
+    "ubicacion_original": "Calle 102 No. 6102, entre 61 y 65, reparto Los Quemados, municipio Marianao, La Habana.",
+    "contacto_publico": "+53 7260 5707; pizarra +53 7260 0325 al 27, ext. 132",
+    "url_fuente": "https://transimport.co.cu",
+    "nombre_fuente": "Comercializadoras autorizadas",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "TRANSIMPORT se especializa en la importación y comercialización de equipos de transporte pesado, vehículos, piezas, agregados y componentes.",
+    "observaciones": "No verificable (firewall); sin catálogo de precios."
+  },
+  {
+    "id_registro": "TRADEX",
+    "nombre_original": "Empresa Proveedora General del Transporte (TRADEX)",
+    "tipo_entidad_original": "Importadora (ferrocarril, vehículos y equipos)",
+    "descripcion_original": "TRADEX, perteneciente a la Unión de Ferrocarriles de Cuba, realiza operaciones de importación y comercialización de equipos y materiales ferroviarios, vehículos, equipos de taller, artículos de ferretería, partes, piezas y accesorios. Autorizada para importar y comercializar vehículos y sus componentes. Web: tradex.cu.",
+    "marcas_mencionadas": [],
+    "modelos_mencionados": [],
+    "precios_originales": [],
+    "ubicacion_original": "Loma 674 e/ Lombillo Y Colón, Nuevo Vedado, Plaza de la Revolución, La Habana.",
+    "contacto_publico": "+53 7881 3109 / +53 7883 5436; directora@tradex.cu",
+    "url_fuente": "https://tradex.cu",
+    "nombre_fuente": "Comercializadoras autorizadas",
+    "fecha_consulta": "2026-10-11",
+    "fragmento_original": "TRADEX, perteneciente a la Unión de Ferrocarriles de Cuba, realiza operaciones de importación y comercialización de equipos y materiales ferroviarios.",
+    "observaciones": "No verificable (firewall); sin catálogo de precios."
+  }
+]
