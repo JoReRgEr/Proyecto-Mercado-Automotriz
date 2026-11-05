@@ -16,7 +16,6 @@ Con esos datos se busca estructurar la información, realizar un análisis explo
 
 ## Estructura del proyecto
 
-```
 Proyecto-Mercado-Automotriz/
 ├── data/
 │   ├── raw/          # Anuncios scrapeados (JSON) - revolico, entrevistas, mercado formal
@@ -31,7 +30,6 @@ Proyecto-Mercado-Automotriz/
 ├── README.md
 ├── AGENTS.md
 └── requirements.txt
-```
 
 - `data/raw/`: salida del scraper y de las fuentes en colecciones JSON (anuncios, entrevistas, mercado formal).
 - `data/processed/`: JSON con anuncios, concesionarios y entrevistas ya limpios y estructurados.
@@ -44,10 +42,8 @@ Proyecto-Mercado-Automotriz/
 
 ## Flujo de datos
 
-```
 scraping (data/raw) → limpieza (data/processed) → análisis (reports/figures)
         → base de datos ← JSON procesado
-```
 
 1. El **scraper** guarda los anuncios obtenidos en `data/raw/` como JSON.
 2. El **procesamiento** normaliza y estructura los datos en `data/processed/`.
