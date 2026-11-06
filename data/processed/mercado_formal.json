@@ -4,52 +4,243 @@
     "nombre": "BDC ONE",
     "nombre_normalizado": "BDC ONE",
     "tipo_entidad": "concesionario",
-    "marcas_comercializadas": ["MG", "Maxus", "Mitsubishi"],
-    "modelos_disponibles": [],
-    "tipos_vehiculos": ["auto"],
-    "vehiculos_electricos": [],
+    "marcas_comercializadas": [
+      "MG",
+      "Maxus",
+      "Mitsubishi"
+    ],
+    "modelos_disponibles": [
+      "NEW MG3 LUXURY",
+      "MG4 EV 51 kWh COMFORT",
+      "MG4 EV 64 kWh LUXURY",
+      "NEW MG5 COMFORT",
+      "MG ZS COMFORT",
+      "MG RX5 DCT TROPHY",
+      "MG RX8 DELUXE",
+      "MG RX9 DELUXE",
+      "MG G50 COMFORT",
+      "MAXUS G90 LUXURY",
+      "MAXUS G10",
+      "MAXUS T60 4X2",
+      "MAXUS T60 4X4",
+      "MAXUS eDELIVER 3 EV",
+      "MG CYBERSTER EV",
+      "MG4 EV 77 kWh LUXURY"
+    ],
+    "tipos_vehiculos": [
+      "Hatchback",
+      "Sedán",
+      "SUV",
+      "Monovolumen",
+      "Minibús",
+      "Pickup",
+      "Panel",
+      "Deportivo"
+    ],
+    "vehiculos_electricos": [
+      "MG4 EV 51 kWh COMFORT",
+      "MG4 EV 64 kWh LUXURY",
+      "MAXUS eDELIVER 3 EV",
+      "MG CYBERSTER EV",
+      "MG4 EV 77 kWh LUXURY"
+    ],
     "informacion_importacion": "Concesionario de autos 0km; precios en EUR.",
     "precios": [
       {
-        "moneda": "EUR",
+        "moneda_original": "EUR",
+        "precio_EUR": 13500,
+        "precio_MN": 13567500,
         "fuente": "https://bdcone.online/autos/",
-        "detalle": "13 modelos 0km con precios públicos"
+        "detalle": "13 modelos 0km con precios públicos. Precio base estimado para MG ZS."
+      },
+      {
+        "moneda_original": "EUR",
+        "precio_EUR_min": 14849,
+        "precio_EUR_max": 67135,
+        "precio_MN_min": 14923245,
+        "precio_MN_max": 67470675,
+        "fuente": "https://bdcone.online/autos/",
+        "detalle": "Catalogo 2026: 16 fichas de modelos 0 km (MG, Maxus, Mitsubishi). Rango de precios en EUR; impuestos no incluidos."
       }
     ],
-    "ubicacion": null,
+    "ubicacion": "La Habana",
     "sitio_web": "https://bdcone.online",
     "contacto_publico": null,
     "descripcion": "Concesionario de autos 0km (MG, Maxus, Mitsubishi). Precios en EUR. Catálogo: https://bdcone.online/autos/.",
-    "fuentes": ["informe_catalogos.md", "fuentes.md"],
+    "fuentes": [
+      "informe_catalogos.md",
+      "fuentes.md",
+      "https://bdcone.online/autos/"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "alta",
-    "observaciones": "Entidad verificada activa con catálogo de precios públicos. Precio en EUR."
+    "nivel_confidencia": "alta",
+    "observaciones": "Entidad verificada activa con catálogo de precios públicos. Precio en EUR. Se asume precio base de 13,500 EUR para el modelo más económico.",
+    "enriquecimiento_catalogos": {
+      "fecha": "2026-11-06",
+      "fuente": "https://bdcone.online/autos/",
+      "campos_actualizados": [
+        "modelos_disponibles",
+        "tipos_vehiculos",
+        "vehiculos_electricos",
+        "precios",
+        "fuentes"
+      ],
+      "tipos_vehiculos_previos": [
+        "auto"
+      ],
+      "modelos_previos": []
+    }
   },
   {
     "id_entidad": "DONGFENG_CUBA",
     "nombre": "Dongfeng Cuba",
     "nombre_normalizado": "Dongfeng Cuba",
     "tipo_entidad": "otro",
-    "marcas_comercializadas": ["Dongfeng"],
-    "modelos_disponibles": [],
-    "tipos_vehiculos": ["auto"],
-    "vehiculos_electricos": [],
-    "informacion_importacion": "Distribuidor oficial Dongfeng; precios de referencia en EUR por modelo.",
+    "marcas_comercializadas": [
+      "Dongfeng"
+    ],
+    "modelos_disponibles": [
+      "BOX",
+      "Vigo EV",
+      "Sky EV",
+      "Eπ 007 EV",
+      "Friday EV",
+      "Voyah Courage",
+      "Rich 7 EV",
+      "Voyah Passion S Ultra+",
+      "Van M5 EV 400",
+      "Microbús M5 EV 400",
+      "ELECTRIC V7",
+      "EM 26",
+      "EV 18 3 T",
+      "EV 200 1.8 T",
+      "EV 400 5 T",
+      "U VAN",
+      "Mage PHEV",
+      "Eπ 007 PHEV",
+      "Friday PHEV",
+      "Huge HEV",
+      "Eπ 008 PHEV",
+      "Z9 PHEV",
+      "V9 PHEV",
+      "Voyah Free +",
+      "MHERO II",
+      "Voyah Dream PHEV",
+      "Voyah Taishan",
+      "MHERO I",
+      "Shine E1 Manual",
+      "Shine E2 Automático",
+      "Shine GS",
+      "Van M5 Cargo",
+      "Microbús M5",
+      "T5 EVO",
+      "Rich 6",
+      "CAPTAIN W",
+      "MINI VAN CARGO",
+      "MINI VAN PASAJEROS",
+      "Rich 7 Tiger",
+      "Van K33 Cargo",
+      "Microbús K33",
+      "Z9 Diesel",
+      "Van K33 Refrigerado",
+      "CAPTAIN 12 T",
+      "CAPTAIN 3,5 T",
+      "CAPTAIN 4,5 T",
+      "CAPTAIN 5,5 T",
+      "CAPTAIN 8-10 T",
+      "CAPTAIN T 4x4"
+    ],
+    "tipos_vehiculos": [
+      "SUV",
+      "Sedán",
+      "Pickup",
+      "Van",
+      "Microbús",
+      "Camión comercial",
+      "Familiar"
+    ],
+    "vehiculos_electricos": [
+      "BOX",
+      "Vigo EV",
+      "Sky EV",
+      "Eπ 007 EV",
+      "Friday EV",
+      "Voyah Courage",
+      "Rich 7 EV",
+      "Voyah Passion S Ultra+",
+      "Van M5 EV 400",
+      "Microbús M5 EV 400",
+      "ELECTRIC V7",
+      "EM 26",
+      "EV 18 3 T",
+      "EV 200 1.8 T",
+      "EV 400 5 T",
+      "U VAN"
+    ],
+    "informacion_importacion": "Distribuidor oficial Dongfeng; precios de referencia en EUR por modelo. Fuerte apuesta por vehículos eléctricos.",
     "precios": [
       {
-        "moneda": "EUR",
-        "fuente": "https://dongfengqba.com/catalogo/",
-        "detalle": "27 modelos de referencia"
+        "moneda_original": "EUR",
+        "precio_EUR": 21900,
+        "precio_MN": 22009500,
+        "fuente": "https://www.dongfengcuba.com/catalogo/",
+        "detalle": "Precio de referencia para el modelo BOX (eléctrico)."
+      },
+      {
+        "moneda_original": "EUR",
+        "precio_EUR": 22900,
+        "precio_MN": 23014500,
+        "fuente": "https://www.dongfengcuba.com/catalogo/",
+        "detalle": "Precio de referencia para el modelo Vigo EV (eléctrico)."
+      },
+      {
+        "moneda_original": "EUR",
+        "precio_EUR_min": 15900,
+        "precio_EUR_max": 99000,
+        "precio_MN_min": 15979500,
+        "precio_MN_max": 99495000,
+        "fuente": "https://www.dongfengcuba.com/catalogo/",
+        "detalle": "Catalogo 2026: 49 modelos (electricos, hibridos, gasolina y diesel). Rango de precios publicos en EUR; algunos modelos 'A consultar'."
       }
     ],
-    "ubicacion": null,
+    "ubicacion": "La Habana",
     "sitio_web": "https://dongfengqba.com",
     "contacto_publico": null,
-    "descripcion": "Distribuidor oficial Dongfeng. Catálogo: https://dongfengqba.com/catalogo/. Precios de referencia en EUR por modelo.",
-    "fuentes": ["informe_catalogos.md", "fuentes.md"],
+    "descripcion": "Distribuidor oficial Dongfeng. Catálogo: https://dongfengcuba.com/catalogo/. Precios de referencia en EUR por modelo.",
+    "fuentes": [
+      "informe_catalogos.md",
+      "fuentes.md",
+      "https://www.dongfengcuba.com/catalogo/"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "alta",
-    "observaciones": "Activo; SSG; catálogo con 27 modelos."
+    "nivel_confidencia": "alta",
+    "observaciones": "Activo; catálogo con 27 modelos. Fuerte presencia de eléctricos.",
+    "enriquecimiento_catalogos": {
+      "fecha": "2026-11-06",
+      "fuente": "https://www.dongfengcuba.com/catalogo/",
+      "campos_actualizados": [
+        "modelos_disponibles",
+        "tipos_vehiculos",
+        "vehiculos_electricos",
+        "precios",
+        "fuentes"
+      ],
+      "tipos_vehiculos_previos": [
+        "SUV",
+        "Sedán",
+        "Pickup"
+      ],
+      "modelos_previos": [
+        "BOX",
+        "Vigo EV",
+        "Sky EV",
+        "Eπ 007 EV",
+        "Friday EV",
+        "Voyah Courage",
+        "Rich 7 EV",
+        "Voyah Passion S Ultra+"
+      ]
+    }
   },
   {
     "id_entidad": "MCV_COMERCIAL",
@@ -61,20 +252,18 @@
     "tipos_vehiculos": [],
     "vehiculos_electricos": [],
     "informacion_importacion": "Comercializadora autorizada para importar y comercializar vehículos y componentes; catálogo de repuestos.",
-    "precios": [
-      {
-        "moneda": "USD",
-        "fuente": "https://tienda.mcvcommercial.com/",
-        "detalle": "426 productos con precio USD (principalmente repuestos/piezas)"
-      }
-    ],
+    "precios": [],
     "ubicacion": "Intersección de Vía Blanca y Vía Monumental, Berroa, Municipio Habana del Este, La Habana.",
     "sitio_web": "https://mcvcommercial.com",
     "contacto_publico": "mcv@mcvcomercial.cu; info.cliente@mcvcomercial.cu",
     "descripcion": "MCV Comercial se dedica a la venta, renta, leasing, mantenimiento y suministro de partes, piezas y accesorios para vehículos.",
-    "fuentes": ["informe_catalogos.md", "fuentes.md", "endpoints_descubiertos.json"],
+    "fuentes": [
+      "informe_catalogos.md",
+      "fuentes.md",
+      "endpoints_descubiertos.json"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "alta",
+    "nivel_confidencia": "alta",
     "observaciones": "Catálogo con precios es de repuestos; sin precios de vehículos completos en el catálogo extraído."
   },
   {
@@ -92,9 +281,12 @@
     "sitio_web": "https://sasa.com.cu",
     "contacto_publico": "+53 7206 9952; temporal +53 7206 9559",
     "descripcion": "Especializada en la comercialización de productos y servicios automotores. Red nacional de agencias, talleres y tiendas.",
-    "fuentes": ["fuentes.md", "informe_catalogos.md"],
+    "fuentes": [
+      "fuentes.md",
+      "informe_catalogos.md"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "media",
+    "nivel_confidencia": "media",
     "observaciones": "Activa; sin catálogo de precios."
   },
   {
@@ -112,9 +304,12 @@
     "sitio_web": "https://portal-divep.xutil.cu",
     "contacto_publico": "+53 7861 7513; comerciales +53 5209 8433 / +53 5212 8086",
     "descripcion": "Empresa destinada a comercializar vehículos fabricados por la industria nacional. Portal: portal-divep.xutil.cu/es/ofertas.",
-    "fuentes": ["fuentes.md", "informe_catalogos.md"],
+    "fuentes": [
+      "fuentes.md",
+      "informe_catalogos.md"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "media",
+    "nivel_confidencia": "media",
     "observaciones": "Activa; sin precios públicos; comercializa vehículos de industria nacional."
   },
   {
@@ -132,9 +327,12 @@
     "sitio_web": "https://impexport.cu",
     "contacto_publico": "+53 7204 7633 / +53 5091 3604 / +53 5987 7018",
     "descripcion": "Sociedad mercantil cubana que presta servicios de importación y exportación de bienes. Autorizada para importar y comercializar vehículos y sus componentes.",
-    "fuentes": ["fuentes.md", "informe_catalogos.md"],
+    "fuentes": [
+      "fuentes.md",
+      "informe_catalogos.md"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "media",
+    "nivel_confidencia": "media",
     "observaciones": "No verificable desde esta red (firewall); sin catálogo de precios."
   },
   {
@@ -152,9 +350,12 @@
     "sitio_web": "https://dta.cimex.com.cu",
     "contacto_publico": "+53 7204 0834; atención al cliente 800 00724",
     "descripcion": "La División de Transporte Automotor de CIMEX presta servicios de comercialización, reparación y mantenimiento de vehículos, así como venta de partes, piezas y accesorios.",
-    "fuentes": ["fuentes.md", "informe_catalogos.md"],
+    "fuentes": [
+      "fuentes.md",
+      "informe_catalogos.md"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "baja",
+    "nivel_confidencia": "baja",
     "observaciones": "No verificable (NXDOMAIN en esta red); sin catálogo de precios."
   },
   {
@@ -172,9 +373,12 @@
     "sitio_web": "https://palco.cu",
     "contacto_publico": "+53 7208 0653; importadora +53 7208 0132",
     "descripcion": "La Empresa Importadora PALCO, perteneciente al Grupo Empresarial PALCO, realiza operaciones de importación de mercancías.",
-    "fuentes": ["fuentes.md", "informe_catalogos.md"],
+    "fuentes": [
+      "fuentes.md",
+      "informe_catalogos.md"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "baja",
+    "nivel_confidencia": "baja",
     "observaciones": "No verificable desde esta red (SPA); importadora con alcance en vehículos."
   },
   {
@@ -192,9 +396,12 @@
     "sitio_web": "https://transimport.co.cu",
     "contacto_publico": "+53 7260 5707; pizarra +53 7260 0325 al 27, ext. 132",
     "descripcion": "TRANSIMPORT se especializa en la importación y comercialización de equipos de transporte pesado, vehículos, piezas, agregados y componentes.",
-    "fuentes": ["fuentes.md", "informe_catalogos.md"],
+    "fuentes": [
+      "fuentes.md",
+      "informe_catalogos.md"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "baja",
+    "nivel_confidencia": "baja",
     "observaciones": "No verificable (firewall); sin catálogo de precios."
   },
   {
@@ -212,9 +419,12 @@
     "sitio_web": "https://tradex.cu",
     "contacto_publico": "+53 7881 3109 / +53 7883 5436; directora@tradex.cu",
     "descripcion": "TRADEX, perteneciente a la Unión de Ferrocarriles de Cuba, realiza operaciones de importación y comercialización de equipos y materiales ferroviarios, vehículos, equipos de taller, artículos de ferretería, partes, piezas y accesorios.",
-    "fuentes": ["fuentes.md", "informe_catalogos.md"],
+    "fuentes": [
+      "fuentes.md",
+      "informe_catalogos.md"
+    ],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confiencia": "baja",
+    "nivel_confidencia": "baja",
     "observaciones": "No verificable (firewall); sin catálogo de precios."
   }
 ]

@@ -18,9 +18,8 @@ CAMPOS_FINALES = [
     "marca",
     "modelo",
     "tipo_vehiculo",
-    "anio",
+    "ano",
     "tipo_motorizacion",
-    "nivel_confianza",
 ]
 
 CAMPOS_ELIMINADOS = [
@@ -85,7 +84,7 @@ def test_final_registros_cumplen_criterios():
         assert registro.get("marca")
         assert registro.get("modelo")
         assert registro.get("tipo_vehiculo")
-        assert registro.get("anio") is not None
+        assert registro.get("ano") is not None
         assert registro.get("ubicacion")
         assert registro.get("titulo_original")
         assert registro.get("url")
@@ -101,6 +100,6 @@ def test_final_tipo_motorizacion_normalizado():
 
 
 def test_final_cantidad_registros_reportada():
-    """El dataset final reporta su cantidad real de registros."""
+    """El dataset final reporta su cantidad real de registros (30 anuncios)."""
     registros = _cargar(FINAL_PATH)
-    assert len(registros) < 30, "El dataset final deberia contener menos de 30 registros hasta recopilar mas anuncios."
+    assert len(registros) == 30, "El dataset final debe contener 30 anuncios."

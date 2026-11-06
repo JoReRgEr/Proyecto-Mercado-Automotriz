@@ -36,11 +36,15 @@ def test_mercado_formal_procesado_valido():
         "marcas_comercializadas", "modelos_disponibles", "tipos_vehiculos",
         "vehiculos_electricos", "informacion_importacion", "precios", "ubicacion",
         "sitio_web", "contacto_publico", "descripcion", "fuentes",
-        "fecha_ultima_verificacion", "nivel_confiencia", "observaciones",
+        "fecha_ultima_verificacion", "observaciones",
     ]
     for registro in registros:
         for campo in campos_esenciales:
             assert campo in registro, f"Falta el campo '{campo}' en la entidad {registro.get('id_entidad')}"
+        # El archivo base manual usa 'nivel_confidencia'; se aceptan ambas grafias.
+        assert (
+            "nivel_confidencia" in registro or "nivel_confiencia" in registro
+        ), f"Falta el nivel de confianza en la entidad {registro.get('id_entidad')}"
 
 
 def test_ambiguedades_revolico_validas_y_consistentes():

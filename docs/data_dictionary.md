@@ -95,16 +95,16 @@ Colección de anuncios scrapeados de la búsqueda de vehículos:
     "marca": "string | null",
     "modelo": "string | null",
     "tipo_vehiculo": "string | null",
-    "anio": "number | null",
-    "tipo_motorizacion": "string | null (electrico | combustible)",
-    "nivel_confiancia": "string"
+    "ano": "number | null",
+    "tipo_motorizacion": "string | null (electrico | combustible)"
   }
 ]
 ```
 
 - Campos eliminados respecto del procesado de Fase 3.1: `kilometraje`, `unidad_kilometraje`, `transmision`, `detalles_carroceria`, `detalles_pintura`, `observaciones`, `accesorios`, `problemas_tecnicos`, `autonomia`, `tiempo_de_uso_declarado`, `estado`.
+- `ano` es el año del vehículo (antes `anio`); el dataset final no incluye `nivel_confianza`.
 - `tipo_motorizacion` se conserva (excepcion de la Fase 3.2) con valores normalizados: `electrico` o `combustible`.
-- `data/processed/anuncios_revolico_final.json`: dataset final con anuncios que cumplen todos los criterios de calidad.
+- `data/processed/anuncios_revolico_final.json`: dataset final con **30 anuncios** que cumplen los criterios de calidad.
 - `reports/anuncios_descartados_final.json`: anuncios descartados del dataset final (con `motivo_exclusion` y `evidencia`).
 
 ## Fuente 2: Entrevistas
@@ -179,11 +179,63 @@ Colección de anuncios scrapeados de la búsqueda de vehículos:
     "descripcion": "string | null",
     "fuentes": [],
     "fecha_ultima_verificacion": "string",
-    "nivel_confiencia": "string",
-    "observaciones": "string | null"
+    "nivel_confidencia": "string",
+    "observaciones": "string | null",
+    "enriquecimiento_catalogos": {
+      "fecha": "string",
+      "fuente": "string (URL del catálogo)",
+      "campos_actualizados": ["string"],
+      "tipos_vehiculos_previos": ["string"],
+      "modelos_previos": ["string"]
+    }
   }
 ]
 ```
+
+- `nivel_confidencia`: campo del archivo base manual (se conserva tal cual; no se renombra).
+- `enriquecimiento_catalogos`: solo en entidades con catálogo scrapeado (Dongfeng Cuba y BDC ONE); documenta la fuente y los valores previos para trazabilidad.
+- `precios`: lista de objetos. Los registros manuales usan `moneda_original`, `precio_EUR` y `precio_MN`; los añadidos en Fase 4.1 usan `precio_EUR_min`/`precio_EUR_max` y `precio_MN_min`/`precio_MN_max`.
+- Conversión aplicada: **1 EUR = 1 005 MN**.
+
+### 3.3 Catálogos scrapeados — `data/raw/catalogos_mercado_formal.json`
+
+```json
+[
+  {
+    "id_entidad": "string",
+    "nombre_entidad": "string",
+    "url_catalogo": "string",
+    "fecha_consulta": "string",
+    "accesible": true,
+    "anio_catalogo": "string | null",
+    "garantia_general": "string | null",
+    "financiamiento": "string | null",
+    "notas": "string",
+    "modelos": [
+      {
+        "modelo": "string",
+        "tipo_vehiculo": "string",
+        "precio_original": "number | null",
+        "precio_max": "number | null",
+        "moneda_original": "string | null (EUR)",
+        "precio_MN": "number | null",
+        "precio_MN_max": "number | null",
+        "motorizacion": "string (electrico | hibrido | gasolina | diesel)",
+        "autonomia_km": "number | null",
+        "autonomia_max_km": "number | null",
+        "ano_modelo": "number | null",
+        "garantia": "string | null",
+        "notas": "string | null"
+      }
+    ]
+  }
+]
+```
+
+- `precio_original` / `precio_max`: rango publicado cuando el catálogo ofrece varias versiones.
+- `ano_modelo`: `null` en ambos catálogos porque los sitios no publican año-modelo por vehículo.
+- `accesible: false` para MCV Comercial (sitio dinámico sin catálogo de vehículos completos).
+- `precio_MN` se calcula con la tasa EUR→MN del proyecto; no se inventan precios "a consultar".
 
 ## Convenciones comunes
 
