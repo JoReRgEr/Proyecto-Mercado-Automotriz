@@ -1,3 +1,8 @@
-- Indicar a OpenCode la busqueda y la creacion del dicc sobre si el auto es electrico o no.
-- Revisar en el Repo si encontro entre todos los anuncios alguno sobre un vehiculo electrico y que me lo diga
-- Procesar entonces todos los anuncios de Revolico que tenemos unirlos en un nuevo data processed final pero solo los que tengan toda la informacion suficiente, de ese json nuevo vamos a editar y eliminar estos diccionarios: kilometraje, unidadad de kilometraje, transmisión, detalles_carroceria, detalles_pintura, observaciones, accesorios, problemas_tecnicos, autonomia, tipo_motorizacion, tiempotiempo_de_uso_declarado, estado. Y nos quedamos con el resto de parametros que luego de pensarlo son los que realmente me interesan para este analisis
+- Entrar en la fase de hacer los analisis y luego en la graficacion
+- Dile a OpenCode que revise estos archivos del mercado_formal el raw y el processed y que entre a los links de las entidades que hay y haga un scrapeo de lo siguiente:
+  1. Que descargue los catalogos de todas las entidades registradas para poder obtener una lista de los vehiculos que tengan en venta, esto lo guardamos en un .json o csv como prefieras, para luego con esos datos rellenar parametros del archivo mercado_formal processed
+  2. Si puedes entrar tu y analizar que otra informacion, que este relacionada con los parametros que tenemos en mercado_informal, podemos sacar que nos sirva.
+  3. El parametro que dice modelos_mencionados es donde vamos a poner todos los modelos de una manera rasteable para su analisis que saquemos del scrapeo de los catalogos.
+ Nota: En caso de tener alguna otra sugerencia lo añades al prompt
+- Revisar el report de mercado_formal para saber que tengo que pedir que revise OpenCode proximamente
+- Se hicieron modificaciones en anuncios_revolico_final.json, especificar que no se modifiquen esos cambios si se tiene que revisar alguno

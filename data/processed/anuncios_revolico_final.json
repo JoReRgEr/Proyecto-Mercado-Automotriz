@@ -10,9 +10,8 @@
     "marca": "Hyundai",
     "modelo": "I10",
     "tipo_vehiculo": "Hatchback",
-    "anio": 2010,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2010,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "54821295",
@@ -25,9 +24,8 @@
     "marca": "Hyundai",
     "modelo": "Palisade",
     "tipo_vehiculo": "SUV",
-    "anio": 2021,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2021,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "54821368",
@@ -40,69 +38,64 @@
     "marca": "Hyundai",
     "modelo": "Elantra",
     "tipo_vehiculo": "Sedán",
-    "anio": 2021,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2021,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "56066787",
     "url": "https://www.revolico.com/item/carro-moderno-hyundai-kona-2022-56066787",
     "titulo_original": "Carro moderno Hyundai Kona 2022",
-    "precio_anuncio": 100,
+    "precio_anuncio": 34000,
     "moneda_anuncio": "USD",
-    "precio_MN": 92000,
+    "precio_MN": 31280000,
     "ubicacion": "La Habana, Arroyo Naranjo",
     "marca": "Hyundai",
     "modelo": "Kona",
     "tipo_vehiculo": "SUV",
-    "anio": 2022,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2022,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "56069281",
     "url": "https://www.revolico.com/item/tucson-2021-hyundai-auto-carro-moderno-56069281",
     "titulo_original": "Tucson 2021 💫 Hyundai auto carro moderno",
-    "precio_anuncio": 100,
+    "precio_anuncio": 45000,
     "moneda_anuncio": "USD",
-    "precio_MN": 92000,
+    "precio_MN": 41400000,
     "ubicacion": "La Habana, Arroyo Naranjo",
     "marca": "Hyundai",
     "modelo": "Auto Carro Moderno",
     "tipo_vehiculo": "SUV",
-    "anio": 2021,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2021,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "56069304",
     "url": "https://www.revolico.com/item/2021-palisade-hyundai-carros-autos-en-la-habana-56069304",
     "titulo_original": "2021 Palisade Hyundai carros autos en La Habana",
-    "precio_anuncio": 10,
+    "precio_anuncio": 45000,
     "moneda_anuncio": "USD",
-    "precio_MN": 9200,
+    "precio_MN": 41400000,
     "ubicacion": "La Habana, Arroyo Naranjo",
     "marca": "Hyundai",
     "modelo": "Carros Autos Habana",
     "tipo_vehiculo": "SUV",
-    "anio": 2021,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2021,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "56069315",
     "url": "https://www.revolico.com/item/sonata-2021-hyundai-con-chapa-certifico-y-listo-para-traspaso-56069315",
     "titulo_original": "🫵 Sonata 2021 Hyundai con Chapa, Certifico y listo para traspaso",
-    "precio_anuncio": 100,
+    "precio_anuncio": 100000,
     "moneda_anuncio": "USD",
-    "precio_MN": 92000,
+    "precio_MN": 92000000,
     "ubicacion": "La Habana, Arroyo Naranjo",
     "marca": "Hyundai",
     "modelo": "Chapa Certifico Y Listo Traspaso",
     "tipo_vehiculo": "Sedán",
-    "anio": 2021,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2021,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "57178119",
@@ -115,9 +108,8 @@
     "marca": "Hyundai",
     "modelo": "Sonata",
     "tipo_vehiculo": "Sedán",
-    "anio": 2021,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2021,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "57378086",
@@ -130,9 +122,8 @@
     "marca": "Hyundai",
     "modelo": "Elantra",
     "tipo_vehiculo": "Sedán",
-    "anio": 2019,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2019,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "57747333",
@@ -145,9 +136,8 @@
     "marca": "Nissan",
     "modelo": "Sunny",
     "tipo_vehiculo": "Sedán",
-    "anio": 2024,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2024,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58170351",
@@ -160,9 +150,8 @@
     "marca": "Honda",
     "modelo": "Civic",
     "tipo_vehiculo": "Sedán",
-    "anio": 2023,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2023,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58203304",
@@ -175,9 +164,8 @@
     "marca": "Hyundai",
     "modelo": "Santa Fe Xl",
     "tipo_vehiculo": "SUV",
-    "anio": 2018,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2018,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58211128",
@@ -190,9 +178,8 @@
     "marca": "Toyota",
     "modelo": "Corolla Se",
     "tipo_vehiculo": "Sedán",
-    "anio": 2022,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2022,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58255526",
@@ -205,9 +192,8 @@
     "marca": "Hyundai",
     "modelo": "I10",
     "tipo_vehiculo": "Hatchback",
-    "anio": 2009,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2009,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58289196",
@@ -220,9 +206,8 @@
     "marca": "Kia",
     "modelo": "Seltos",
     "tipo_vehiculo": "SUV",
-    "anio": 2025,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2025,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58361131",
@@ -235,9 +220,8 @@
     "marca": "Hyundai",
     "modelo": "Palisade",
     "tipo_vehiculo": "SUV",
-    "anio": 2023,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2023,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58361348",
@@ -250,9 +234,8 @@
     "marca": "Hyundai",
     "modelo": "Santa Fe",
     "tipo_vehiculo": "SUV",
-    "anio": 2022,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2022,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58408608",
@@ -265,9 +248,8 @@
     "marca": "Kia",
     "modelo": "Picanto",
     "tipo_vehiculo": "Hatchback",
-    "anio": 2012,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2012,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58452034",
@@ -280,9 +262,8 @@
     "marca": "Hyundai",
     "modelo": "Atos",
     "tipo_vehiculo": "Hatchback",
-    "anio": 2009,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2009,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58452177",
@@ -295,9 +276,8 @@
     "marca": "Hyundai",
     "modelo": "Atos",
     "tipo_vehiculo": "Hatchback",
-    "anio": 2009,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2009,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58523345",
@@ -310,9 +290,8 @@
     "marca": "Hyundai",
     "modelo": "Santa Fe",
     "tipo_vehiculo": "SUV",
-    "anio": 2017,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2017,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58573578",
@@ -325,9 +304,8 @@
     "marca": "Kia",
     "modelo": "Sportage",
     "tipo_vehiculo": "SUV",
-    "anio": 2022,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2022,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58593695",
@@ -340,24 +318,22 @@
     "marca": "Hyundai",
     "modelo": "Ioniq",
     "tipo_vehiculo": "SUV",
-    "anio": 2024,
-    "tipo_motorizacion": "electrico",
-    "nivel_confianza": "alta"
+    "ano": 2024,
+    "tipo_motorizacion": "electrico"
   },
   {
     "id_anuncio": "58602430",
     "url": "https://www.revolico.com/item/bmw-s1000rr-2027-solo-8-millas-rodadas-58602430",
-    "titulo_original": "BMW S1000RR 2027 solo 8 millas rodadas",
-    "precio_anuncio": 75,
+    "titulo_original": "BMW S1000RR 2026 solo 8 millas rodadas",
+    "precio_anuncio": 75000,
     "moneda_anuncio": "USD",
-    "precio_MN": 69000,
+    "precio_MN": 69000000,
     "ubicacion": "La Habana, Centro Habana",
     "marca": "BMW",
     "modelo": "S1000RR",
     "tipo_vehiculo": "Deportivo",
-    "anio": 2027,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2026,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58602882",
@@ -370,24 +346,22 @@
     "marca": "Hyundai",
     "modelo": "Sonata",
     "tipo_vehiculo": "Sedán",
-    "anio": 2023,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2023,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58603611",
     "url": "https://www.revolico.com/item/elegancia-potencia-y-estilo-en-un-solo-vehiculo-kia-sportage-2022-58603611",
     "titulo_original": "🚨🔥 ¡ELEGANCIA, POTENCIA Y ESTILO EN UN SOLO VEHÍCULO! 🔥🚨 🚘 KIA SPORTAGE 2022 🤍",
-    "precio_anuncio": 34,
+    "precio_anuncio": 34000,
     "moneda_anuncio": "USD",
-    "precio_MN": 31280,
+    "precio_MN": 31280000,
     "ubicacion": "La Habana, Plaza",
     "marca": "Kia",
     "modelo": "Sportage",
     "tipo_vehiculo": "SUV",
-    "anio": 2022,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2022,
+    "tipo_motorizacion": "combustible"
   },
   {
     "id_anuncio": "58603793",
@@ -400,8 +374,49 @@
     "marca": "Kia",
     "modelo": "Sportage",
     "tipo_vehiculo": "SUV",
-    "anio": 2022,
-    "tipo_motorizacion": "combustible",
-    "nivel_confianza": "alta"
+    "ano": 2022,
+    "tipo_motorizacion": "combustible"
+  },
+  {
+    "id_anuncio": "58593696",
+    "url": "https://www.revolico.com/item/carro-electrico-57871223",
+    "titulo_original": "HYUNDAI IONIQ 5 2024 ELECTRICO IMPECABLE",
+    "precio_anuncio": 38000,
+    "moneda_anuncio": "USD",
+    "precio_MN": 34960000,
+    "ubicacion": "La Habana, Playa",
+    "marca": "Hyundai",
+    "modelo": "Ioniq 5",
+    "tipo_vehiculo": "SUV",
+    "ano": 2024,
+    "tipo_motorizacion": "electrico"
+  },
+  {
+    "id_anuncio": "58593697",
+    "url": "https://www.revolico.com/item/dongfeng-box-430-56807995",
+    "titulo_original": "DONGFENG BOX 01 430",
+    "precio_anuncio": 33000,
+    "moneda_anuncio": "USD",
+    "precio_MN": 30360000,
+    "ubicacion": "La Habana, Playa",
+    "marca": "Dongfeng",
+    "modelo": "BOX",
+    "tipo_vehiculo": "SUV",
+    "ano": 2026,
+    "tipo_motorizacion": "electrico"
+  },
+  {
+    "id_anuncio": "58593698",
+    "url": "https://www.revolico.com/item/geely-ck-del-2015-10l-de-combustible-11600-56641148",
+    "titulo_original": "Geely CK del 2015",
+    "precio_anuncio": 11600,
+    "moneda_anuncio": "USD",
+    "precio_MN": 10672000,
+    "ubicacion": "La Habana, Habana del Este",
+    "marca": "Geely",
+    "modelo": "CK",
+    "tipo_vehiculo": "Sedán",
+    "ano": 2015,
+    "tipo_motorizacion": "combustible"
   }
 ]
