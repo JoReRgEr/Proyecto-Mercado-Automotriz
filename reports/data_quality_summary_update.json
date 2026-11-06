@@ -1,0 +1,19 @@
+{
+  "fuente": "revolico",
+  "muestra": "Nueva muestra Fase 3.1 (30 anuncios validos recolectados)",
+  "total_anuncios": 30,
+  "total_unicos": 30,
+  "total_descartados": 10,
+  "porcentajes_sobre_registros_reales": {
+    "marca": 100.0,
+    "modelo": 96.7,
+    "anio": 76.7,
+    "precio": 100.0,
+    "moneda": 100.0,
+    "ubicacion": 100.0
+  },
+  "con_motorizacion_conocida": 0,
+  "con_tipo_vehiculo_conocido": 8,
+  "con_kilometraje_conocido": 0,
+  "cantidad_ambiguidades": 26
+}

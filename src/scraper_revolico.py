@@ -1,6 +1,6 @@
 """Scraper de anuncios de venta de vehículos en Revolico.
 
-Fase 2 y Fase 3.1 del proyecto ICD Proyecto Mercado.
+Fase 2 del proyecto ICD Proyecto Mercado.
 
 Consulta la búsqueda de carros de Revolico, obtiene el HTML con los
 anuncios (cargados vía SSR + Apollo en el script `__NEXT_DATA__`) y
@@ -12,7 +12,6 @@ Uso:
 
 import argparse
 import json
-import re
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -30,29 +29,23 @@ DEFAULT_MAX_ANUNCIOS = 30
 REQUEST_TIMEOUT = 30
 REQUEST_DELAY_SECONDS = 2.0
 RAW_PATH = Path("data/raw/anuncios_revolico.json")
+BRAND_KEYWORDS = [
+    "hyundai", "kia", "toyota", "nissan", "audi", "honda", "chevrolet", "bmw",
+    "volkswagen", "volvo", "mg", "tesla", "ford", "fiat", "peugeot", "renault",
+    "suzuki", "jeep", "land rover", "porsche", "dodge", "chrysler", "mitsubishi",
+    "subaru", "mazda", "geely", "byd", "donga", "bestune", "jac", "proac",
+]
+
+KEYWORDS_DESCARGO = [
+    "bateria", "batería", "neumatic", "pneu", "llanta", "pieza", "repuesto",
+    "accesorio", "servicio", "taller", "mecanic", "transport", "logistic",
+]
+
+
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 )
-
-BRAND_REGEX = re.compile(
-    r"\b(" + "|".join(
-        [
-            "hyundai", "kia", "toyota", "nissan", "audi", "honda", "chevrolet",
-            "bmw", "volkswagen", "volvo", "mg", "tesla", "ford", "fiat", "peugeot",
-            "renault", "suzuki", "jeep", "land", "rover", "porsche", "dodge",
-            "chrysler", "mitsubishi", "subaru", "mazda", "geely", "byd", "donga",
-            "bestune", "jac", "proac",
-        ]
-    ) + r")\b",
-    re.IGNORECASE,
-)
-
-CAMPOS_NO_VEHICULO_KEYWORDS = [
-    "bateria", "batería", "pieza", "neumatico", "neumático", "taller", "servicio",
-    "servicios", "transporte", "transport", "mecanico", "mecánica", "mantenimiento",
-    "reparacion", "repa", "accesorio", "accesorios", "llanta", "llantas",
-]
 
 
 def _ahora_iso() -> str:
@@ -104,27 +97,6 @@ def _extraer_anuncios(html: str) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
     return anuncios, estado
 
 
-def _es_vehiculo_principal(anuncio: Dict[str, Any], precio: Any) -> bool:
-    """Determina si el anuncio representa venta de un automóvil completo.
-
-    Reglas de Fase 3.1:
-    - Excluir publicaciones de baterías, piezas, accesorios, neumáticos, servicios.
-    - Excluir títulos genéricos sin marca/modelo que permitan confirmar el vehículo.
-    - Excluir precios simbólicos de 1 USD cuando no existe descripción que confirme precio real.
-    """
-    titulo = (anuncio.get("title") or "").lower()
-    for keyword in CAMPOS_NO_VEHICULO_KEYWORDS:
-        if keyword in titulo:
-            return False
-    if not BRAND_REGEX.search(anuncio.get("title") or ""):
-        return False
-    if precio is None or precio <= 0:
-        return False
-    if precio == 1:
-        return False
-    return True
-
-
 def _normalizar_anuncio(
     anuncio: Dict[str, Any],
     estado: Dict[str, Any],
@@ -171,15 +143,30 @@ def _normalizar_anuncio(
     }
 
 
+def _es_publicacion_vehiculo_completa(ad: Dict[str, Any]) -> bool:
+    """Determina si el anuncio representa una venta de automóvil completo."""
+    texto = " ".join(
+        filter(
+            None,
+            [(ad.get("title") or "").lower(), (ad.get("description") or "").lower()],
+        )
+    )
+    for keyword in KEYWORDS_DESCARGO:
+        if keyword in texto:
+            return False
+    return any(keyword in texto for keyword in BRAND_KEYWORDS)
+
+
 def scrape_revolico(
     max_anuncios: int = DEFAULT_MAX_ANUNCIOS,
     category: str = CATEGORY,
     subcategory: str = SUBCATEGORY,
     page_length: int = PAGE_LENGTH,
     delay: float = REQUEST_DELAY_SECONDS,
-) -> List[Dict[str, Any]]:
-    """Recolecta anuncios de la categoria de carros en Revolico."""
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """Recolecta anuncios de la categoría de carros en Revolico."""
     anuncios: List[Dict[str, Any]] = []
+    descartados: List[Dict[str, Any]] = []
     vistos: set = set()
     page = 1
 
@@ -199,9 +186,36 @@ def scrape_revolico(
         for ad in ads:
             if ad.get("id") in vistos:
                 continue
-            vistos.add(ad.get("id"))
-            if not _es_vehiculo_principal(ad, ad.get("price")):
+            if not _es_publicacion_vehiculo_completa(ad):
+                texto_descarte = " ".join(
+                    filter(
+                        None,
+                        [(ad.get("title") or "").lower(), (ad.get("description") or "").lower()],
+                    )
+                )
+                motivo_exclusion = "no_es_vehiculo"
+                for keyword in KEYWORDS_DESCARGO:
+                    if keyword in texto_descarte:
+                        motivo_exclusion = (
+                            "venta_de_piezas"
+                            if keyword in (
+                                "bateria", "batería", "neumatic", "pneu", "llanta",
+                                "pieza", "repuesto", "accesorio",
+                            )
+                            else "servicio"
+                        )
+                        break
+                descartados.append({
+                    "id_anuncio": ad.get("id"),
+                    "url": f"{BASE_URL}{ad.get('permalink')}" if ad.get("permalink") else None,
+                    "titulo_original": ad.get("title"),
+                    "precio_publicado": ad.get("price"),
+                    "motivo_exclusion": motivo_exclusion,
+                    "evidencia": ad.get("title") or "",
+                    "fecha_revision": _ahora_iso(),
+                })
                 continue
+            vistos.add(ad.get("id"))
             anuncios.append(_normalizar_anuncio(ad, estado, _ahora_iso()))
             recolectados_en_pagina += 1
             if len(anuncios) >= max_anuncios:
@@ -212,17 +226,23 @@ def scrape_revolico(
         page += 1
         time.sleep(delay)
 
-    return anuncios
+    return anuncios, descartados
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Scraper de anuncios de carros en Revolico")
     parser.add_argument("--max-anuncios", type=int, default=DEFAULT_MAX_ANUNCIOS, help="Maximo de anuncios a recolectar")
     parser.add_argument("--out", type=str, default=str(RAW_PATH), help="Archivo JSON de salida")
+    parser.add_argument("--descartados", type=str, default="", help="Archivo JSON para registrar anuncios descartados")
     args = parser.parse_args()
 
-    anuncios = scrape_revolico(max_anuncios=args.max_anuncios)
+    anuncios, descartados = scrape_revolico(max_anuncios=args.max_anuncios)
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+    if args.descartados:
+        Path(args.descartados).parent.mkdir(parents=True, exist_ok=True)
+        with open(args.descartados, "w", encoding="utf-8") as f:
+            json.dump(descartados, f, ensure_ascii=False, indent=2, default=str)
+            f.write("\n")
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump(anuncios, f, ensure_ascii=False, indent=2, default=str)
         f.write("\n")

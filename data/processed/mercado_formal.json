@@ -4,15 +4,9 @@
     "nombre": "BDC ONE",
     "nombre_normalizado": "BDC ONE",
     "tipo_entidad": "concesionario",
-    "marcas_comercializadas": [
-      "MG",
-      "Maxus",
-      "Mitsubishi"
-    ],
+    "marcas_comercializadas": ["MG", "Maxus", "Mitsubishi"],
     "modelos_disponibles": [],
-    "tipos_vehiculos": [
-      "auto"
-    ],
+    "tipos_vehiculos": ["auto"],
     "vehiculos_electricos": [],
     "informacion_importacion": "Concesionario de autos 0km; precios en EUR.",
     "precios": [
@@ -26,12 +20,9 @@
     "sitio_web": "https://bdcone.online",
     "contacto_publico": null,
     "descripcion": "Concesionario de autos 0km (MG, Maxus, Mitsubishi). Precios en EUR. Catálogo: https://bdcone.online/autos/.",
-    "fuentes": [
-      "informe_catalogos.md",
-      "fuentes.md"
-    ],
+    "fuentes": ["informe_catalogos.md", "fuentes.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "alta",
+    "nivel_confiencia": "alta",
     "observaciones": "Entidad verificada activa con catálogo de precios públicos. Precio en EUR."
   },
   {
@@ -39,13 +30,9 @@
     "nombre": "Dongfeng Cuba",
     "nombre_normalizado": "Dongfeng Cuba",
     "tipo_entidad": "otro",
-    "marcas_comercializadas": [
-      "Dongfeng"
-    ],
+    "marcas_comercializadas": ["Dongfeng"],
     "modelos_disponibles": [],
-    "tipos_vehiculos": [
-      "auto"
-    ],
+    "tipos_vehiculos": ["auto"],
     "vehiculos_electricos": [],
     "informacion_importacion": "Distribuidor oficial Dongfeng; precios de referencia en EUR por modelo.",
     "precios": [
@@ -59,12 +46,9 @@
     "sitio_web": "https://dongfengqba.com",
     "contacto_publico": null,
     "descripcion": "Distribuidor oficial Dongfeng. Catálogo: https://dongfengqba.com/catalogo/. Precios de referencia en EUR por modelo.",
-    "fuentes": [
-      "informe_catalogos.md",
-      "fuentes.md"
-    ],
+    "fuentes": ["informe_catalogos.md", "fuentes.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "alta",
+    "nivel_confiencia": "alta",
     "observaciones": "Activo; SSG; catálogo con 27 modelos."
   },
   {
@@ -88,13 +72,9 @@
     "sitio_web": "https://mcvcommercial.com",
     "contacto_publico": "mcv@mcvcomercial.cu; info.cliente@mcvcomercial.cu",
     "descripcion": "MCV Comercial se dedica a la venta, renta, leasing, mantenimiento y suministro de partes, piezas y accesorios para vehículos.",
-    "fuentes": [
-      "informe_catalogos.md",
-      "fuentes.md",
-      "endpoints_descubiertos.json"
-    ],
+    "fuentes": ["informe_catalogos.md", "fuentes.md", "endpoints_descubiertos.json"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "alta",
+    "nivel_confiencia": "alta",
     "observaciones": "Catálogo con precios es de repuestos; sin precios de vehículos completos en el catálogo extraído."
   },
   {
@@ -112,12 +92,9 @@
     "sitio_web": "https://sasa.com.cu",
     "contacto_publico": "+53 7206 9952; temporal +53 7206 9559",
     "descripcion": "Especializada en la comercialización de productos y servicios automotores. Red nacional de agencias, talleres y tiendas.",
-    "fuentes": [
-      "fuentes.md",
-      "informe_catalogos.md"
-    ],
+    "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "media",
+    "nivel_confiencia": "media",
     "observaciones": "Activa; sin catálogo de precios."
   },
   {
@@ -135,12 +112,9 @@
     "sitio_web": "https://portal-divep.xutil.cu",
     "contacto_publico": "+53 7861 7513; comerciales +53 5209 8433 / +53 5212 8086",
     "descripcion": "Empresa destinada a comercializar vehículos fabricados por la industria nacional. Portal: portal-divep.xutil.cu/es/ofertas.",
-    "fuentes": [
-      "fuentes.md",
-      "informe_catalogos.md"
-    ],
+    "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "media",
+    "nivel_confiencia": "media",
     "observaciones": "Activa; sin precios públicos; comercializa vehículos de industria nacional."
   },
   {
@@ -158,12 +132,9 @@
     "sitio_web": "https://impexport.cu",
     "contacto_publico": "+53 7204 7633 / +53 5091 3604 / +53 5987 7018",
     "descripcion": "Sociedad mercantil cubana que presta servicios de importación y exportación de bienes. Autorizada para importar y comercializar vehículos y sus componentes.",
-    "fuentes": [
-      "fuentes.md",
-      "informe_catalogos.md"
-    ],
+    "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "media",
+    "nivel_confiencia": "media",
     "observaciones": "No verificable desde esta red (firewall); sin catálogo de precios."
   },
   {
@@ -181,12 +152,9 @@
     "sitio_web": "https://dta.cimex.com.cu",
     "contacto_publico": "+53 7204 0834; atención al cliente 800 00724",
     "descripcion": "La División de Transporte Automotor de CIMEX presta servicios de comercialización, reparación y mantenimiento de vehículos, así como venta de partes, piezas y accesorios.",
-    "fuentes": [
-      "fuentes.md",
-      "informe_catalogos.md"
-    ],
+    "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "baja",
+    "nivel_confiencia": "baja",
     "observaciones": "No verificable (NXDOMAIN en esta red); sin catálogo de precios."
   },
   {
@@ -204,12 +172,9 @@
     "sitio_web": "https://palco.cu",
     "contacto_publico": "+53 7208 0653; importadora +53 7208 0132",
     "descripcion": "La Empresa Importadora PALCO, perteneciente al Grupo Empresarial PALCO, realiza operaciones de importación de mercancías.",
-    "fuentes": [
-      "fuentes.md",
-      "informe_catalogos.md"
-    ],
+    "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "baja",
+    "nivel_confiencia": "baja",
     "observaciones": "No verificable desde esta red (SPA); importadora con alcance en vehículos."
   },
   {
@@ -227,12 +192,9 @@
     "sitio_web": "https://transimport.co.cu",
     "contacto_publico": "+53 7260 5707; pizarra +53 7260 0325 al 27, ext. 132",
     "descripcion": "TRANSIMPORT se especializa en la importación y comercialización de equipos de transporte pesado, vehículos, piezas, agregados y componentes.",
-    "fuentes": [
-      "fuentes.md",
-      "informe_catalogos.md"
-    ],
+    "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "baja",
+    "nivel_confiencia": "baja",
     "observaciones": "No verificable (firewall); sin catálogo de precios."
   },
   {
@@ -250,12 +212,9 @@
     "sitio_web": "https://tradex.cu",
     "contacto_publico": "+53 7881 3109 / +53 7883 5436; directora@tradex.cu",
     "descripcion": "TRADEX, perteneciente a la Unión de Ferrocarriles de Cuba, realiza operaciones de importación y comercialización de equipos y materiales ferroviarios, vehículos, equipos de taller, artículos de ferretería, partes, piezas y accesorios.",
-    "fuentes": [
-      "fuentes.md",
-      "informe_catalogos.md"
-    ],
+    "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confanza": "baja",
+    "nivel_confiencia": "baja",
     "observaciones": "No verificable (firewall); sin catálogo de precios."
   }
 ]

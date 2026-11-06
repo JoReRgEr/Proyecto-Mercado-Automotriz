@@ -6,6 +6,9 @@
 - **Tipo**: Anuncios informales de venta de autos.
 - **Objetivo**: Extraer un mínimo de 30 anuncios.
 - **Formato esperado**: JSON con los anuncios originales.
+- **Fase 3.1**: Se aplico un filtro para excluir publicaciones que no corresponden a la venta de un automovil completo (baterias, piezas, accesorios, servicios, transporte).
+- **Descartes**: `reports/anuncios_descartes_revolico.json`.
+- **Procesamiento**: `src/process_revolico.py` -> `data/processed/anuncios_revolico_processed_update.json`.
 
 ## 2. Entrevistas
 
@@ -26,3 +29,10 @@
 - **Codificación**: UTF-8.
 - **Valores desconocidos**: `null`.
 - **Esquemas**: Independientes por cada fuente.
+
+## 4. Tasa de cambio de referencia (Fase 3.1)
+
+- **Moneda base**: USD.
+- **Moneda de destino**: CUP.
+- **Tasa**: 920 CUP por USD.
+- **Documento**: `docs/exchange_rate_reference.md`.

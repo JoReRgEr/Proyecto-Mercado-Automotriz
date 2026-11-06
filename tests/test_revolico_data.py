@@ -5,7 +5,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RAW_PATH = PROJECT_ROOT / "data" / "raw" / "anuncios_revolico.json"
-PROCESSED_PATH = PROJECT_ROOT / "data" / "processed" / "anuncios_revolico.json"
+PROCESSED_UPDATE_PATH = PROJECT_ROOT / "data" / "processed" / "anuncios_revolico_processed_update.json"
 
 ESSENTIAL_FIELDS = [
     "id_anuncio",
@@ -81,21 +81,22 @@ def test_anuncios_sin_identificadores_duplicados():
     assert len(ids) == len(set(ids)), "Se encontraron identificadores duplicados en anuncios"
 
 
-def test_procesados_conservan_campos_originales():
-    """Los registros procesados deben conservar los campos originales."""
+def test_archivo_update_conserva_datos_originales():
+    """El archivo procesado de actualizacion conserva la informacion cruda."""
     anuncios_raw = _cargar(RAW_PATH)
-    anuncios_procesados = _cargar(PROCESSED_PATH)
-    assert isinstance(anuncios_procesados, list) and len(anuncios_procesados) > 0
-    assert len(anuncios_raw) == len(anuncios_procesados)
-    for anuncio_raw, anuncio_procesado in zip(anuncios_raw, anuncios_procesados):
-        for campo, valor in anuncio_raw.items():
-            assert anuncio_procesado.get(campo) == valor, (
-                f"El campo original '{campo}' no se conservó en el anuncio {anuncio_raw.get('id_anuncio')}"
-            )
+    procesados = _cargar(PROCESSED_UPDATE_PATH)
+    assert isinstance(procesados, list) and len(procesados) > 0
+    assert len(anuncios_raw) == len(procesados)
+    for anuncio_raw, anuncio_procesado in zip(anuncios_raw, procesados):
+        assert str(anuncio_procesado.get("id_anuncio")) == str(anuncio_raw.get("id_anuncio"))
+        assert anuncio_procesado.get("titulo_original") == anuncio_raw.get("titulo_original")
+        assert anuncio_procesado.get("precio_anuncio") == anuncio_raw.get("precio_original")
+        assert anuncio_procesado.get("moneda_anuncio") == anuncio_raw.get("moneda_original")
+        assert anuncio_procesado.get("ubicacion") == anuncio_raw.get("ubicacion")
 
 
 def test_tratamiento_de_valores_no_conocidos():
-    """Los campos no obtenidos deben ser null o listas vacías, sin inventar datos."""
+    """Los campos no obtenidos deben ser null o listas vacias, sin inventar datos."""
     anuncios = _cargar(RAW_PATH)
     for anuncio in anuncios:
         for campo in OPTIONAL_NULLABLE_FIELDS:

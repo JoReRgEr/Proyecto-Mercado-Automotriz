@@ -1,6 +1,6 @@
 # Metodología de Entrevistas
 
-**Proyecto:** ICD Proyecto Mercado — Fase 2.
+**Proyecto:** ICD Proyecto Mercado — Fase 2 y Fase 4.
 
 ## Objetivo
 
@@ -20,6 +20,7 @@ Recoger declaraciones de al menos 30 personas relacionadas con el mercado automo
 
 ## Registro
 
-- Cada entrevista se registra con `id_entrevista`, `fecha`, `perfil_general`, `rango_edad` (opcional), `relacion_con_el_mercado`, `zona` y `respuestas`.
-- Las respuestas se organizan por identificadores de preguntas (`question_id`).
-- El dataset inicial está vacío (`data/raw/entrevistas.json`) hasta completar las entrevistas.
+- Cada entrevista se registra con `id_entrevista`, `zona`, `ocupacion`, `relacion_con_el_mercado`, `propietario_vehiculo`, `experiencia_vehiculos_electricos` y `respuestas`.
+- Las respuestas se organizan en el campo `respuestas` con los identificadores de los temas tratados (`tipo_vehiculo_observado`, `marcas_modernas_observadas`, `opinion_vehiculos_electricos`, `predominio_autos_clasicos`).
+- El dataset de entrevistas contiene las 30 entrevistas registradas (`data/raw/entrevistas.json` y `data/processed/entrevistas.json`).
+- Las respuestas se registran de forma declarativa y anónima; no se recopilan datos personales identificativos.

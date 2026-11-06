@@ -1,0 +1,340 @@
+[
+  {
+    "id_anuncio": "56069281",
+    "titulo": "Tucson 2021 💫 Hyundai auto carro moderno",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Tucson 2021 💫 Hyundai auto carro moderno",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56069281",
+    "titulo": "Tucson 2021 💫 Hyundai auto carro moderno",
+    "atributo_afectado": "precio",
+    "fragmento_problematico": "100",
+    "interpretaciones_posibles": [
+      "Precio posiblemente simbólico o listado incompleto"
+    ],
+    "valor_asignado": 100,
+    "motivo_de_la_ambiguedad": "Precio muy bajo para el tipo de vehículo; puede tratarse de anuncio general o error de publicación.",
+    "recomendacion_de_revision": "Abrir la publicación individual y verificar el precio real.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56069315",
+    "titulo": "🫵 Sonata 2021 Hyundai con Chapa, Certifico y listo para traspaso",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "🫵 Sonata 2021 Hyundai con Chapa, Certifico y listo para traspaso",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56069315",
+    "titulo": "🫵 Sonata 2021 Hyundai con Chapa, Certifico y listo para traspaso",
+    "atributo_afectado": "precio",
+    "fragmento_problematico": "100",
+    "interpretaciones_posibles": [
+      "Precio posiblemente simbólico o listado incompleto"
+    ],
+    "valor_asignado": 100,
+    "motivo_de_la_ambiguedad": "Precio muy bajo para el tipo de vehículo; puede tratarse de anuncio general o error de publicación.",
+    "recomendacion_de_revision": "Abrir la publicación individual y verificar el precio real.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56069304",
+    "titulo": "2021 Palisade Hyundai carros autos en La Habana",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "2021 Palisade Hyundai carros autos en La Habana",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56069304",
+    "titulo": "2021 Palisade Hyundai carros autos en La Habana",
+    "atributo_afectado": "precio",
+    "fragmento_problematico": "10",
+    "interpretaciones_posibles": [
+      "Precio posiblemente simbólico o listado incompleto"
+    ],
+    "valor_asignado": 10,
+    "motivo_de_la_ambiguedad": "Precio muy bajo para el tipo de vehículo; puede tratarse de anuncio general o error de publicación.",
+    "recomendacion_de_revision": "Abrir la publicación individual y verificar el precio real.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56066787",
+    "titulo": "Carro moderno Hyundai Kona 2022",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Carro moderno Hyundai Kona 2022",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56066787",
+    "titulo": "Carro moderno Hyundai Kona 2022",
+    "atributo_afectado": "precio",
+    "fragmento_problematico": "100",
+    "interpretaciones_posibles": [
+      "Precio posiblemente simbólico o listado incompleto"
+    ],
+    "valor_asignado": 100,
+    "motivo_de_la_ambiguedad": "Precio muy bajo para el tipo de vehículo; puede tratarse de anuncio general o error de publicación.",
+    "recomendacion_de_revision": "Abrir la publicación individual y verificar el precio real.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56233660",
+    "titulo": "🚗 *Hyundai Sonata 2019* Listo para la venta con chapa y papeles al día.",
+    "atributo_afectado": "precio",
+    "fragmento_problematico": "1",
+    "interpretaciones_posibles": [
+      "Precio posiblemente simbólico o listado incompleto"
+    ],
+    "valor_asignado": 1,
+    "motivo_de_la_ambiguedad": "Precio muy bajo para el tipo de vehículo; puede tratarse de anuncio general o error de publicación.",
+    "recomendacion_de_revision": "Abrir la publicación individual y verificar el precio real.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "58289196",
+    "titulo": "KIA SELTOS 2025",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "KIA SELTOS 2025",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "58211128",
+    "titulo": "🇯🇵 TOYOTA COROLLA SE 2022 — EL MÁS DEPORTIVO",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "🇯🇵 TOYOTA COROLLA SE 2022 — EL MÁS DEPORTIVO",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "58408608",
+    "titulo": "🇰🇷 KIA PICANTO 2012",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "🇰🇷 KIA PICANTO 2012",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "58170351",
+    "titulo": "⭕ HONDA CIVIC 2023",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "⭕ HONDA CIVIC 2023",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "58593695",
+    "titulo": "HYUNDAI IONIQ 5 2024",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "HYUNDAI IONIQ 5 2024",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56666872",
+    "titulo": "BMW X5 ..add",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "BMW X5 ..add",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "51107131",
+    "titulo": "Audi rs4 2.5 t quattro",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Audi rs4 2.5 t quattro",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "57621897",
+    "titulo": "Geely ck 2011",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Geely ck 2011",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "57947857",
+    "titulo": "Pissicorre chevrolet 51 diésel",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Pissicorre chevrolet 51 diésel",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "51102539",
+    "titulo": "Honda civic 2020",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Honda civic 2020",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "51102564",
+    "titulo": "Bmw x6 2022 competición",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Bmw x6 2022 competición",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "54991866",
+    "titulo": "Chevrolet colorado",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Chevrolet colorado",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "56161986",
+    "titulo": "Kia picanto 2017",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Kia picanto 2017",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "57938420",
+    "titulo": "Kia picanto 2009 automático",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "Kia picanto 2009 automático",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "57005697",
+    "titulo": "🚘🔥 CHEVROLET COLORADO Z71 2022 🔥🚘",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "🚘🔥 CHEVROLET COLORADO Z71 2022 🔥🚘",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "57832444",
+    "titulo": "KIA PICANTO 2017🚙",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "KIA PICANTO 2017🚙",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  },
+  {
+    "id_anuncio": "57986098",
+    "titulo": "🇫🇷🚗 PEUGEOT 301 — AÑO 2018 🚗🇫🇷",
+    "atributo_afectado": "tipo_vehiculo",
+    "fragmento_problematico": "🇫🇷🚗 PEUGEOT 301 — AÑO 2018 🚗🇫🇷",
+    "interpretaciones_posibles": [
+      "Tipo de carrocería no determinado"
+    ],
+    "valor_asignado": null,
+    "motivo_de_la_ambiguedad": "Marca y modelo identificados, pero la carrocería no pudo determinarse de forma inequívoca.",
+    "recomendacion_de_revision": "Consultar ficha técnica del fabricante o versión del modelo.",
+    "nivel_confiencia": "media"
+  }
+]

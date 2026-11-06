@@ -6,7 +6,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 MERCADO_FORMAL_RAW = PROJECT_ROOT / "data" / "raw" / "mercado_formal.json"
 MERCADO_FORMAL_PROCESADO = PROJECT_ROOT / "data" / "processed" / "mercado_formal.json"
-AMBIGUEDADES = PROJECT_ROOT / "reports" / "ambiguedades_revolico.json"
+AMBIGUEDADES = PROJECT_ROOT / "reports" / "ambiguedades_revolico_update.json"
 RESUMEN_CALIDAD = PROJECT_ROOT / "reports" / "data_quality_summary.json"
 
 
@@ -36,7 +36,7 @@ def test_mercado_formal_procesado_valido():
         "marcas_comercializadas", "modelos_disponibles", "tipos_vehiculos",
         "vehiculos_electricos", "informacion_importacion", "precios", "ubicacion",
         "sitio_web", "contacto_publico", "descripcion", "fuentes",
-        "fecha_ultima_verificacion", "nivel_confanza", "observaciones",
+        "fecha_ultima_verificacion", "nivel_confiencia", "observaciones",
     ]
     for registro in registros:
         for campo in campos_esenciales:
@@ -52,8 +52,8 @@ def test_ambiguedades_revolico_validas_y_consistentes():
     for ambiguedad in ambiguedades:
         assert "id_anuncio" in ambiguedad
         assert "atributo_afectado" in ambiguedad
-        assert "nivel_confanza" in ambiguedad
-        assert ambiguedad.get("id_anuncio") in ids_validos
+        assert "nivel_confiencia" in ambiguedad
+        assert str(ambiguedad.get("id_anuncio")) in {str(i) for i in ids_validos}
 
 
 def test_resumen_calidad_valido():

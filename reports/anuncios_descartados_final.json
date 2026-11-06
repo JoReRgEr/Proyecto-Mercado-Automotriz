@@ -1,0 +1,153 @@
+[
+  {
+    "id_anuncio": "57146750",
+    "url": "https://www.revolico.com/item/chevrolet-56-57146750",
+    "titulo_original": "Chevrolet 56",
+    "motivo_exclusion": [
+      "modelo",
+      "tipo_vehiculo",
+      "anio"
+    ],
+    "evidencia": "Chevrolet 56"
+  },
+  {
+    "id_anuncio": "58619581",
+    "url": "https://www.revolico.com/item/kia-sportage-58619581",
+    "titulo_original": "KIA SPORTAGE",
+    "motivo_exclusion": [
+      "anio"
+    ],
+    "evidencia": "KIA SPORTAGE"
+  },
+  {
+    "id_anuncio": "56233660",
+    "url": "https://www.revolico.com/item/hyundai-sonata-2019-listo-para-la-venta-con-chapa-y-papeles-al-dia-56233660",
+    "titulo_original": "🚗 *Hyundai Sonata 2019* Listo para la venta con chapa y papeles al día.",
+    "motivo_exclusion": [
+      "precio_anuncio"
+    ],
+    "evidencia": "🚗 *Hyundai Sonata 2019* Listo para la venta con chapa y papeles al día."
+  },
+  {
+    "id_anuncio": "58593604",
+    "url": "https://www.revolico.com/item/kia-sportage-58593604",
+    "titulo_original": "KIA SPORTAGE",
+    "motivo_exclusion": [
+      "anio"
+    ],
+    "evidencia": "KIA SPORTAGE"
+  },
+  {
+    "id_anuncio": "56666872",
+    "url": "https://www.revolico.com/item/bmw-x5-add-56666872",
+    "titulo_original": "BMW X5 ..add",
+    "motivo_exclusion": [
+      "tipo_vehiculo",
+      "anio"
+    ],
+    "evidencia": "BMW X5 ..add"
+  },
+  {
+    "id_anuncio": "51107131",
+    "url": "https://www.revolico.com/item/audi-rs325-t-quattro-51107131",
+    "titulo_original": "Audi rs4 2.5 t quattro",
+    "motivo_exclusion": [
+      "tipo_vehiculo",
+      "anio"
+    ],
+    "evidencia": "Audi rs4 2.5 t quattro"
+  },
+  {
+    "id_anuncio": "57621897",
+    "url": "https://www.revolico.com/item/geely-ck-2011-57621897",
+    "titulo_original": "Geely ck 2011",
+    "motivo_exclusion": [
+      "tipo_vehiculo"
+    ],
+    "evidencia": "Geely ck 2011"
+  },
+  {
+    "id_anuncio": "57947857",
+    "url": "https://www.revolico.com/item/pissicorre-chevrolet-51-diesel-57947857",
+    "titulo_original": "Pissicorre chevrolet 51 diésel",
+    "motivo_exclusion": [
+      "tipo_vehiculo",
+      "anio"
+    ],
+    "evidencia": "Pissicorre chevrolet 51 diésel"
+  },
+  {
+    "id_anuncio": "51102539",
+    "url": "https://www.revolico.com/item/honda-civic-2020-51102539",
+    "titulo_original": "Honda civic 2020",
+    "motivo_exclusion": [
+      "tipo_vehiculo"
+    ],
+    "evidencia": "Honda civic 2020"
+  },
+  {
+    "id_anuncio": "51102564",
+    "url": "https://www.revolico.com/item/bmw-x6-2022-competicion-51102564",
+    "titulo_original": "Bmw x6 2022 competición",
+    "motivo_exclusion": [
+      "tipo_vehiculo"
+    ],
+    "evidencia": "Bmw x6 2022 competición"
+  },
+  {
+    "id_anuncio": "54991866",
+    "url": "https://www.revolico.com/item/chevrolet-colorado-54991866",
+    "titulo_original": "Chevrolet colorado",
+    "motivo_exclusion": [
+      "tipo_vehiculo",
+      "anio"
+    ],
+    "evidencia": "Chevrolet colorado"
+  },
+  {
+    "id_anuncio": "56161986",
+    "url": "https://www.revolico.com/item/kia-picanto-2017-56161986",
+    "titulo_original": "Kia picanto 2017",
+    "motivo_exclusion": [
+      "tipo_vehiculo"
+    ],
+    "evidencia": "Kia picanto 2017"
+  },
+  {
+    "id_anuncio": "57938420",
+    "url": "https://www.revolico.com/item/kia-picanto-2009-automatico-57938420",
+    "titulo_original": "Kia picanto 2009 automático",
+    "motivo_exclusion": [
+      "tipo_vehiculo"
+    ],
+    "evidencia": "Kia picanto 2009 automático"
+  },
+  {
+    "id_anuncio": "57005697",
+    "url": "https://www.revolico.com/item/chevrolet-colorado-z71-2022-57005697",
+    "titulo_original": "🚘🔥 CHEVROLET COLORADO Z71 2022 🔥🚘",
+    "motivo_exclusion": [
+      "tipo_vehiculo"
+    ],
+    "evidencia": "🚘🔥 CHEVROLET COLORADO Z71 2022 🔥🚘"
+  },
+  {
+    "id_anuncio": "57832444",
+    "url": "https://www.revolico.com/item/kia-picanto-2017-57832444",
+    "titulo_original": "KIA PICANTO 2017🚙",
+    "motivo_exclusion": [
+      "tipo_vehiculo"
+    ],
+    "evidencia": "KIA PICANTO 2017🚙"
+  },
+  {
+    "id_anuncio": "57986098",
+    "url": "https://www.revolico.com/item/peugeot-301-ano-2018-57986098",
+    "titulo_original": "🇫🇷🚗 PEUGEOT 301 — AÑO 2018 🚗🇫🇷",
+    "motivo_exclusion": [
+      "modelo",
+      "tipo_vehiculo"
+    ],
+    "evidencia": "🇫🇷🚗 PEUGEOT 301 — AÑO 2018 🚗🇫🇷"
+  }
+]

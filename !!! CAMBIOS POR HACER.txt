@@ -1,3 +1,3 @@
-- Motorizacion y Kilometraje dicc con muy poca informacion (eliminar). HECHO 
 - Indicar a OpenCode la busqueda y la creacion del dicc sobre si el auto es electrico o no.
-- El archivo Informe revisarlo e indicar a OpenCode que lo actualice y rectifique los errores que se han resuelto y cuales no. Solucionar los problemas o modificar lo que quede pendiente.
+- Revisar en el Repo si encontro entre todos los anuncios alguno sobre un vehiculo electrico y que me lo diga
+- Procesar entonces todos los anuncios de Revolico que tenemos unirlos en un nuevo data processed final pero solo los que tengan toda la informacion suficiente, de ese json nuevo vamos a editar y eliminar estos diccionarios: kilometraje, unidadad de kilometraje, transmisión, detalles_carroceria, detalles_pintura, observaciones, accesorios, problemas_tecnicos, autonomia, tipo_motorizacion, tiempotiempo_de_uso_declarado, estado. Y nos quedamos con el resto de parametros que luego de pensarlo son los que realmente me interesan para este analisis
