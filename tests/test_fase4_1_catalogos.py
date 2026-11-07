@@ -5,9 +5,9 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CATALOGOS_PATH = PROJECT_ROOT / "data" / "raw" / "catalogos_mercado_formal.json"
-MERCADO_FORMAL_PATH = PROJECT_ROOT / "data" / "processed" / "mercado_formal.json"
+MERCADO_FORMAL_PATH = PROJECT_ROOT / "data" / "processed_final" / "mercado_formal_final.json"
 MERCADO_FORMAL_MANUAL = PROJECT_ROOT / "data" / "processed" / "mercado_formal_processed.json"
-REVOLICO_FINAL_PATH = PROJECT_ROOT / "data" / "processed" / "anuncios_revolico_final.json"
+REVOLICO_FINAL_PATH = PROJECT_ROOT / "data" / "processed_final" / "anuncios_revolico_final.json"
 
 EUR_MN = 1005
 MOTORIZACIONES = ("electrico", "hibrido", "gasolina", "diesel")
@@ -144,7 +144,7 @@ def test_mercado_formal_mantiene_estructura_manual():
         faltantes = [campo for campo in previo if campo not in registro]
         assert not faltantes, f"Se perdieron campos en {registro['id_entidad']}: {faltantes}"
         assert len(registro["precios"]) >= len(previo["precios"])
-        assert "nivel_confidencia" in registro or "nivel_confiencia" in registro
+        assert "nivel_confianza" in registro or "nivel_confiencia" in registro
         assert registro["fecha_ultima_verificacion"] == previo["fecha_ultima_verificacion"]
 
 
@@ -174,16 +174,16 @@ def test_revolico_final_30_registros_y_ultimos_tres():
     anuncios = _cargar(REVOLICO_FINAL_PATH)
     assert len(anuncios) == 30
     ultimos = {anuncio["id_anuncio"]: anuncio for anuncio in anuncios[-3:]}
-    assert list(ultimos.keys()) == ["58593696", "58593697", "58593698"]
+    assert list(ultimos.keys()) == ["57871223", "56807995", "56641148"]
 
-    assert ultimos["58593696"]["marca"] == "Hyundai"
-    assert ultimos["58593696"]["precio_anuncio"] == 38000
-    assert ultimos["58593696"]["ano"] == 2024
+    assert ultimos["57871223"]["marca"] == "Hyundai"
+    assert ultimos["57871223"]["precio_anuncio"] == 38000
+    assert ultimos["57871223"]["ano"] == 2024
 
-    assert ultimos["58593697"]["marca"] == "Dongfeng"
-    assert ultimos["58593697"]["tipo_motorizacion"] == "electrico"
-    assert ultimos["58593697"]["ano"] == 2026
+    assert ultimos["56807995"]["marca"] == "Dongfeng"
+    assert ultimos["56807995"]["tipo_motorizacion"] == "electrico"
+    assert ultimos["56807995"]["ano"] == 2026
 
-    assert ultimos["58593698"]["marca"] == "Geely"
-    assert ultimos["58593698"]["precio_anuncio"] == 11600
-    assert ultimos["58593698"]["ano"] == 2015
+    assert ultimos["56641148"]["marca"] == "Geely"
+    assert ultimos["56641148"]["precio_anuncio"] == 11600
+    assert ultimos["56641148"]["ano"] == 2015

@@ -24,7 +24,7 @@
     "descripcion": "Concesionario de autos 0km (MG, Maxus, Mitsubishi). Precios en EUR. Catálogo: https://bdcone.online/autos/.",
     "fuentes": ["informe_catalogos.md", "fuentes.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "alta",
+    "nivel_confianza": "alta",
     "observaciones": "Entidad verificada activa con catálogo de precios públicos. Precio en EUR. Se asume precio base de 13,500 EUR para el modelo más económico."
   },
   {
@@ -59,7 +59,7 @@
     "descripcion": "Distribuidor oficial Dongfeng. Catálogo: https://dongfengcuba.com/catalogo/. Precios de referencia en EUR por modelo.",
     "fuentes": ["informe_catalogos.md", "fuentes.md", "https://www.dongfengcuba.com/catalogo/"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "alta",
+    "nivel_confianza": "alta",
     "observaciones": "Activo; catálogo con 27 modelos. Fuerte presencia de eléctricos."
   },
   {
@@ -79,7 +79,7 @@
     "descripcion": "MCV Comercial se dedica a la venta, renta, leasing, mantenimiento y suministro de partes, piezas y accesorios para vehículos.",
     "fuentes": ["informe_catalogos.md", "fuentes.md", "endpoints_descubiertos.json"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "alta",
+    "nivel_confianza": "alta",
     "observaciones": "Catálogo con precios es de repuestos; sin precios de vehículos completos en el catálogo extraído."
   },
   {
@@ -99,7 +99,7 @@
     "descripcion": "Especializada en la comercialización de productos y servicios automotores. Red nacional de agencias, talleres y tiendas.",
     "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "media",
+    "nivel_confianza": "media",
     "observaciones": "Activa; sin catálogo de precios."
   },
   {
@@ -119,7 +119,7 @@
     "descripcion": "Empresa destinada a comercializar vehículos fabricados por la industria nacional. Portal: portal-divep.xutil.cu/es/ofertas.",
     "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "media",
+    "nivel_confianza": "media",
     "observaciones": "Activa; sin precios públicos; comercializa vehículos de industria nacional."
   },
   {
@@ -139,7 +139,7 @@
     "descripcion": "Sociedad mercantil cubana que presta servicios de importación y exportación de bienes. Autorizada para importar y comercializar vehículos y sus componentes.",
     "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "media",
+    "nivel_confianza": "media",
     "observaciones": "No verificable desde esta red (firewall); sin catálogo de precios."
   },
   {
@@ -159,7 +159,7 @@
     "descripcion": "La División de Transporte Automotor de CIMEX presta servicios de comercialización, reparación y mantenimiento de vehículos, así como venta de partes, piezas y accesorios.",
     "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "baja",
+    "nivel_confianza": "baja",
     "observaciones": "No verificable (NXDOMAIN en esta red); sin catálogo de precios."
   },
   {
@@ -179,7 +179,7 @@
     "descripcion": "La Empresa Importadora PALCO, perteneciente al Grupo Empresarial PALCO, realiza operaciones de importación de mercancías.",
     "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "baja",
+    "nivel_confianza": "baja",
     "observaciones": "No verificable desde esta red (SPA); importadora con alcance en vehículos."
   },
   {
@@ -199,7 +199,7 @@
     "descripcion": "TRANSIMPORT se especializa en la importación y comercialización de equipos de transporte pesado, vehículos, piezas, agregados y componentes.",
     "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "baja",
+    "nivel_confianza": "baja",
     "observaciones": "No verificable (firewall); sin catálogo de precios."
   },
   {
@@ -219,7 +219,7 @@
     "descripcion": "TRADEX, perteneciente a la Unión de Ferrocarriles de Cuba, realiza operaciones de importación y comercialización de equipos y materiales ferroviarios, vehículos, equipos de taller, artículos de ferretería, partes, piezas y accesorios.",
     "fuentes": ["fuentes.md", "informe_catalogos.md"],
     "fecha_ultima_verificacion": "2026-10-11",
-    "nivel_confidencia": "baja",
+    "nivel_confianza": "baja",
     "observaciones": "No verificable (firewall); sin catálogo de precios."
   }
 ]

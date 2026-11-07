@@ -12,43 +12,67 @@ Analizar el mercado de venta de automóviles en La Habana a partir de:
 - **Datos formales**: información de concesionarios y empresas formales del mercado.
 - **Entrevistas**: declaraciones de al menos 30 personas sobre la compra y venta de autos.
 
-Con esos datos se busca estructurar la información, realizar un análisis exploratorio del mercado y llegar a conclusiones sobre la modernización del automóvil en Cuba.
+Con esos datos se estructura la información, se realiza un análisis exploratorio del mercado y se llegan a conclusiones sobre la modernización del automóvil en Cuba.
 
 ## Estructura del proyecto
 
+```
 Proyecto-Mercado-Automotriz/
 ├── data/
-│   ├── raw/          # Anuncios scrapeados (JSON) - revolico, entrevistas, mercado formal
-│   └── processed/    # Datos limpios y normalizados (JSON)
+│   ├── raw/              # Datos crudos (JSON): anuncios, catálogos, mercado formal
+│   ├── processed/        # Datos intermedios y de trabajo (JSON)
+│   ├── processed_final/  # DataSets finales (JSON) - no se modifican
+│   │   ├── anuncios_revolico_final.json
+│   │   ├── mercado_formal_final.json
+│   │   └── entrevistas_final.json
+│   └── data_backup/      # Copias de seguridad (JSON)
 ├── reports/
-│   └── figures/      # Gráficas del análisis exploratorio
-├── src/              # Código fuente (scraper, procesamiento, EDA, DB)
-├── notebooks/        # Notebooks de Jupyter para el EDA
-├── docs/            # Documentación del proyecto
-├── examples/        # Ejemplos de esquemas JSON
-├── tests/           # Pruebas automatizadas
+│   ├── figures/          # Gráficas del EDA (PNG)
+│   ├── informe_final_fase4_1.md
+│   ├── informe_final_fase4_2.md
+│   ├── catalagos_analisis_extra.md
+│   ├── modelos_a_consultar_dongfeng.md
+│   └── otros informes...
+├── src/                  # Código fuente (scraper, procesamiento)
+├── notebooks/            # Notebooks de Jupyter
+│   ├── 00_setup_and_overview.ipynb          # Entrada técnica
+│   ├── 01_analisis_revolico.ipynb           # Apoyo: mercado informal
+│   ├── 02_analisis_mercado_formal.ipynb     # Apoyo: mercado formal
+│   ├── 03_analisis_entrevistas.ipynb        # Apoyo: entrevistas
+│   └── 04_integracion_y_conclusiones.ipynb  # PRINCIPAL (para presentar)
+├── docs/                 # Documentación
+│   ├── data_dictionary.md
+│   ├── eda_plan.md
+│   ├── conclusiones.md
+│   └── otros documentos...
+├── examples/             # Ejemplos de esquemas JSON
+├── tests/                # Pruebas automatizadas
+├── requirements.txt
 ├── README.md
-├── AGENTS.md
-└── requirements.txt
+└── AGENTS.md
+```
 
-- `data/raw/`: salida del scraper y de las fuentes en colecciones JSON (anuncios, entrevistas, mercado formal).
-- `data/processed/`: JSON con anuncios, concesionarios y entrevistas ya limpios y estructurados.
+- `data/raw/`: salida del scraper y de las fuentes en colecciones JSON (anuncios, entrevistas, mercado formal, catálogos).
+- `data/processed_final/`: dataSets finales listos para el EDA (no se modifican).
+- `data/data_backup/`: copias de seguridad de versiones previas.
 - `reports/figures/`: gráficas generadas por el análisis exploratorio.
 - `src/`: módulos de Python para cada fase del proyecto.
 - `notebooks/`: notebooks de Jupyter con el análisis exploratorio.
-- `docs/`: documentación, decisiones y notas del proyecto.
-- `tests/`: pruebas del proyecto.
+- `docs/`: documentación, decisiones, diccionario de datos y conclusiones.
+- `tests/`: pruebas automatizadas del proyecto.
 - `examples/`: ejemplos de esquemas JSON por fuente.
+
+## Estructura de notebooks (importante para la presentación)
+
+- **`notebooks/04_integracion_y_conclusiones.ipynb`**: NOTEBOOK PRINCIPAL (MAESTRO). Es el que se abre para la presentación y defensa del proyecto. Recorre toda la historia: tema, preguntas de investigación, metodología, hallazgos de cada mercado, integración, tendencias y conclusiones finales.
+- **`notebooks/01_analisis_revolico.ipynb`**: notebook de apoyo con el análisis detallado del mercado informal.
+- **`notebooks/02_analisis_mercado_formal.ipynb`**: notebook de apoyo con el análisis detallado del mercado formal.
+- **`notebooks/03_analisis_entrevistas.ipynb`**: notebook de apoyo con el análisis detallado de las entrevistas.
+- **`notebooks/00_setup_and_overview.ipynb`**: punto de entrada técnico; carga y describe los tres dataSets finales.
 
 ## Flujo de datos
 
-scraping (data/raw) → limpieza (data/processed) → análisis (reports/figures)
-        → base de datos ← JSON procesado
-
-1. El **scraper** guarda los anuncios obtenidos en `data/raw/` como JSON.
-2. El **procesamiento** normaliza y estructura los datos en `data/processed/`.
-3. El **análisis exploratorio** genera gráficas en `reports/figures/`.
-4. Todo se carga en una **base de datos** y se analiza con Python.
+scraping (data/raw) → limpieza (data/processed) → análisis (reports/figures) → notebooks → base de datos
 
 ## Requisitos
 
@@ -66,52 +90,58 @@ pip install -r requirements.txt
 
 ## Uso
 
-### Scraper de Revolico
+### Ejecutar los notebooks
+
+Abrir en Jupyter Lab o Jupyter Notebook:
 
 ```bash
-python src/scraper_revolico.py --max-anuncios 30
+jupyter lab notebooks/
 ```
 
-Guarda los anuncios en `data/raw/anuncios_revolico.json`. El parámetro `--max-anuncios` permite configurar el máximo de anuncios a recolectar.
+El notebook principal para la presentación es **`04_integracion_y_conclusiones.ipynb`**.
 
-El scraper excluye automaticamente publicaciones que no corresponden a la venta de un automovil completo (baterias, piezas, accesorios, servicios, transporte) y registra los descartes en el archivo indicado por `--descartados`.
-
-### Procesamiento
+### Ejecutar las pruebas
 
 ```bash
-python src/process_revolico.py
+python -m pytest        # ejecutar pruebas (35 pruebas, todas pasando)
 ```
 
-Genera `data/processed/anuncios_revolico_processed_update.json` con la estructura definitiva de Fase 3.1 (precios normalizados, conversion USD -> CUP con tasa de referencia de 920, unidad de kilometraje, tipo de vehiculo, etc.).
+## Resultados principales del EDA (Fase 5)
 
-- Tasa de conversion: `docs/exchange_rate_reference.md` (1 USD = 920 CUP).
-- Descartes del scraper: `reports/anuncios_descartes_revolico.json`.
-- Ambiguedades: `reports/ambiguedades_revolico_update.json` y `reports/ambiguedades_revolico_update.md`.
-- Resumen de calidad: `reports/data_quality_summary_update.json` y `reports/data_quality_summary_update.md`.
+### Mercado informal (Revolico - 30 anuncios)
 
-### Pruebas
+- Hyundai domina con 63% de los anuncios.
+- SUV es el tipo más frecuente (50%).
+- Solo 10% son vehículos eléctricos.
+- Rango de precios: 10.000 – 100.000 USD (mediana 31.000 USD).
 
-```bash
-python -m pytest        # ejecutar pruebas
-```
+### Mercado formal (10 entidades)
 
-## Estado del proyecto
+- Solo 2 entidades tienen catálogo público: Dongfeng Cuba (49 modelos) y BDC ONE (16 modelos).
+- 21 de 65 modelos en catálogos son eléctricos.
+- Precios formales: 14.849 – 99.000 EUR (sin impuestos).
 
-Fase actual: **Fase 4 — Consolidación de fuentes y preparación para el análisis exploratorio (EDA)**.
+### Entrevistas (30 personas)
 
-Las tres fuentes de datos están listas para el análisis:
+- 83% creen que predominan los autos clásicos.
+- 87% tienen opinión negativa sobre vehículos eléctricos.
+- Kia y Hyundai son las marcas modernas más mencionadas.
 
-1. **Revolico**: `data/raw/anuncios_revolico.json` (nueva muestra Fase 3.1 de 30 anuncios validos + respaldo + descartes) y `data/processed/anuncios_revolico_processed_update.json` (estructura definitiva con conversion USD -> CUP y tasa de referencia de 920).
-2. **Mercado Formal**: `data/raw/mercado_formal.json` y `data/processed/mercado_formal.json` (10 entidades).
-3. **Entrevistas**: `data/raw/entrevistas.json` y `data/processed/entrevistas.json` (30 entrevistas registradas).
+## Limitaciones
 
-Próximas fases:
+- Muestra pequeña (30 anuncios, 30 entrevistas).
+- Entrevistas concentradas en Alamar (20 de 30).
+- Precios formales sin impuestos; 15 modelos sin precio público.
+- Sin año-modelo en catálogos formales.
+- Revolico como única plataforma informal.
 
-1. Análisis exploratorio (EDA) sobre los datos procesados (gráficas en `reports/figures/`, notebooks en `notebooks/`).
-2. Carga en base de datos.
-3. Gráficas y conclusiones definitivas.
+## Trabajo futuro
 
-> En la Fase 4 no se realizaron nuevos escaneos ni recolecciones; solo se consolidaron las fuentes existentes.
+- Ampliar la muestra de anuncios y entrevistas.
+- Incluir más plataformas de venta informal.
+- Estudiar el impacto de los precios de combustibles.
+- Analizar políticas de importación y aranceles.
+- Estudiar la infraestructura de carga eléctrica.
 
 ## Autor
 

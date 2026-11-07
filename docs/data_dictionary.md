@@ -179,7 +179,7 @@ Colección de anuncios scrapeados de la búsqueda de vehículos:
     "descripcion": "string | null",
     "fuentes": [],
     "fecha_ultima_verificacion": "string",
-    "nivel_confidencia": "string",
+    "nivel_confianza": "string",
     "observaciones": "string | null",
     "enriquecimiento_catalogos": {
       "fecha": "string",
@@ -192,7 +192,7 @@ Colección de anuncios scrapeados de la búsqueda de vehículos:
 ]
 ```
 
-- `nivel_confidencia`: campo del archivo base manual (se conserva tal cual; no se renombra).
+- `nivel_confianza`: campo del archivo base manual (se conserva tal cual; no se renombra).
 - `enriquecimiento_catalogos`: solo en entidades con catálogo scrapeado (Dongfeng Cuba y BDC ONE); documenta la fuente y los valores previos para trazabilidad.
 - `precios`: lista de objetos. Los registros manuales usan `moneda_original`, `precio_EUR` y `precio_MN`; los añadidos en Fase 4.1 usan `precio_EUR_min`/`precio_EUR_max` y `precio_MN_min`/`precio_MN_max`.
 - Conversión aplicada: **1 EUR = 1 005 MN**.
@@ -243,3 +243,33 @@ Colección de anuncios scrapeados de la búsqueda de vehículos:
 - `null` para valores desconocidos; listas vacías cuando corresponde.
 - Esquemas independientes por fuente.
 - Colecciones representadas como arreglos JSON.
+
+## Notas aclaratorias — Catálogos, precios y año
+
+### 1. Entidades con catálogo disponible
+
+Solo dos de las 10 entidades del mercado formal tienen catálogo público con información de modelos y precios:
+
+- **Dongfeng Cuba** (`https://www.dongfengcuba.com/catalogo/`): 49 modelos (16 eléctricos, 12 híbridos, 10 gasolina, 11 diésel).
+- **BDC ONE** (`https://bdcone.online/autos/`): 16 modelos (5 eléctricos, 11 gasolina).
+
+### 2. Entidades sin información de catálogo
+
+Las siguientes 8 entidades no tienen información pública de catálogo de vehículos completos y se documentan como **"sin información pública"**:
+
+SASA, DIVEP, IMPEXPORT, CIMEX_DTA, PALCO, TRANSIMPORT, TRADEX y MCV Comercial (sitio dinámico, solo repuestos).
+
+En `data/processed_final/mercado_formal_final.json`, estas entidades mantienen `modelos_disponibles: []`, `tipos_vehiculos: []`, `vehiculos_electricos: []` y `precios: []`.
+
+### 3. Precios de catálogo sin impuestos
+
+Los precios publicados en los catálogos de Dongfeng Cuba y BDC ONE **no incluyen impuestos**. BDC ONE declara explícitamente que el precio del catálogo es el valor del vehículo en el exterior y que los impuestos los fija la empresa importadora (Resolución 172/2026 de Finanzas y Precios). Por tanto:
+
+- No se aplican ajustes por impuestos en el análisis.
+- Los precios en MN se calculan directamente con la tasa de cambio del proyecto (1 EUR = 1 005 MN) sobre el precio publicado, sin agregar impuestos.
+
+### 4. Campo año (ano)
+
+- **Mercado informal (Revolico):** el campo `ano` se usa para registrar el año del vehículo (2009–2026).
+- **Mercado formal:** los catálogos no especifican año-modelo por vehículo, por lo que el campo `ano_modelo` queda como `null` en todos los registros del catálogo y no se incluye un campo `ano` en las entidades del mercado formal. El año solo se considera en el análisis del mercado informal.
+

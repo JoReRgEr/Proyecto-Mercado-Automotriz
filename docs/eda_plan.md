@@ -1,8 +1,8 @@
 # Plan de Análisis Exploratorio de Datos (EDA)
 
 **Proyecto:** Mercado Automotriz en La Habana — ICD
-**Fase:** 4.1 (planificación) → Fase 5 (ejecución)
-**Notebook de partida:** `notebooks/00_setup_and_overview.ipynb`
+**Fase:** 5 (ejecutado y completado)
+**Notebooks:** `00_setup_and_overview.ipynb`, `01_analisis_revolico.ipynb`, `02_analisis_mercado_formal.ipynb`, `03_analisis_entrevistas.ipynb`, `04_integracion_y_conclusiones.ipynb` (principal/maestro)
 
 ---
 
@@ -20,10 +20,10 @@
 
 | Dataset | Registros | Variables clave | Limitaciones |
 |---|---|---|---|
-| Mercado informal (`data/processed/anuncios_revolico_final.json`) | 30 anuncios | `precio_anuncio`, `moneda_anuncio`, `precio_MN`, `marca`, `modelo`, `ano`, `tipo_vehiculo`, `tipo_motorizacion`, `ubicacion` | Muestra pequeña; solo La Habana; precios pedidos, no de cierre |
-| Mercado formal (`data/processed/mercado_formal.json`) | 10 entidades | `marcas_comercializadas`, `modelos_disponibles`, `tipos_vehiculos`, `vehiculos_electricos`, `precios` | Solo 2 entidades con catálogo; precios sin impuestos o "a consultar"; sin año-modelo |
+| Mercado informal (`data/processed_final/anuncios_revolico_final.json`) | 30 anuncios | `precio_anuncio`, `moneda_anuncio`, `precio_MN`, `marca`, `modelo`, `ano`, `tipo_vehiculo`, `tipo_motorizacion`, `ubicacion` | Muestra pequeña; solo La Habana; precios pedidos, no de cierre |
+| Mercado formal (`data/processed_final/mercado_formal_final.json`) | 10 entidades | `marcas_comercializadas`, `modelos_disponibles`, `tipos_vehiculos`, `vehiculos_electricos`, `precios` | Solo 2 entidades con catálogo; precios sin impuestos o "a consultar"; sin año-modelo |
 | Catálogos (`data/raw/catalogos_mercado_formal.json`) | 65 modelos (49 + 16) | `modelo`, `tipo_vehiculo`, `precio_original`, `motorizacion`, `autonomia_km`, `garantia` | MCV sin catálogo; 15 modelos sin precio |
-| Entrevistas (`data/raw/entrevistas.json`) | 30 personas | Opiniones, preferencias, barreras y expectativas | Respuestas declarativas; no probabilísticas |
+| Entrevistas (`data/processed_final/entrevistas_final.json`) | 30 personas | Opiniones, preferencias, barreras y expectativas | Respuestas declarativas; no probabilísticas |
 
 **Tasas de conversión del proyecto:** 1 EUR = 1 005 MN; 1 USD = 920 MN.
 
@@ -133,7 +133,7 @@ Las tablas derivadas se guardarán en `data/processed/` si se reutilizan; las fi
 
 1. Notebooks `01`–`04` ejecutados y con interpretación escrita.
 2. Figuras F1–F13 en `reports/figures/`.
-3. Tablas resumen en `data/processed/` (si se reutilizan).
+3. Tablas resumen en `data/processed_final/` (si se reutilizan).
 4. Documento de conclusiones con las hipótesis evaluadas.
 5. Presentación final para la evaluación universitaria.
 
@@ -145,3 +145,81 @@ Las tablas derivadas se guardarán en `data/processed/` si se reutilizan; las fi
 - Cada pregunta de investigación tiene al menos una figura o tabla que la responde.
 - Cada hipótesis queda evaluada explícitamente.
 - Las limitaciones se declaran junto a los resultados, no solo al final.
+
+---
+
+## 11. Notas aclaratorias — Catálogos, precios y año
+
+### 1. Entidades con catálogo disponible
+
+Solo dos de las 10 entidades del mercado formal tienen catálogo público con información de modelos y precios:
+
+- **Dongfeng Cuba** (`https://www.dongfengcuba.com/catalogo/`): 49 modelos (16 eléctricos, 12 híbridos, 10 gasolina, 11 diésel).
+- **BDC ONE** (`https://bdcone.online/autos/`): 16 modelos (5 eléctricos, 11 gasolina).
+
+### 2. Entidades sin información de catálogo
+
+Las siguientes 8 entidades no tienen información pública de catálogo de vehículos completos y se documentan como **"sin información pública"**:
+
+SASA, DIVEP, IMPEXPORT, CIMEX_DTA, PALCO, TRANSIMPORT, TRADEX y MCV Comercial (sitio dinámico, solo repuestos).
+
+### 3. Precios de catálogo sin impuestos
+
+Los precios publicados en los catálogos de Dongfeng Cuba y BDC ONE **no incluyen impuestos**. BDC ONE declara explícitamente que el precio del catálogo es el valor del vehículo en el exterior y que los impuestos los fija la empresa importadora (Resolución 172/2026 de Finanzas y Precios). Por tanto:
+
+- No se aplican ajustes por impuestos en el análisis.
+- Los precios en MN se calculan directamente con la tasa de cambio del proyecto (1 EUR = 1 005 MN) sobre el precio publicado, sin agregar impuestos.
+
+### 4. Campo año (ano)
+
+- **Mercado informal (Revolico):** el campo `ano` se usa para registrar el año del vehículo (2009–2026).
+- **Mercado formal:** los catálogos no especifican año-modelo por vehículo, por lo que el campo `ano_modelo` queda como `null` en todos los registros del catálogo y no se incluye un campo `ano` en las entidades del mercado formal. El año solo se considera en el análisis del mercado informal.
+
+---
+
+## Estado final del EDA (Fase 5 completada)
+
+### Resultados obtenidos
+
+Todos los análisis planificados se ejecutaron y los gráficos se generaron en `reports/figures/`:
+
+| Figura | Descripción | Notebook |
+|---|---|---|
+| f01 | Distribución de precios (histograma + KDE) | 01 |
+| f02 | Distribución por año del vehículo | 01 |
+| f03 | Precio promedio por tipo de vehículo | 01 |
+| f04 | Eléctrico vs combustión | 01 |
+| f05 | Precio vs año (scatter) | 01 |
+| f06 | Top 10 marcas más frecuentes | 01 |
+| f07 | Modelos por entidad y motorización | 02 |
+| f08 | Distribución de motorización formal | 02 |
+| f09 | Precios formales por entidad | 02 |
+| f10 | Autonomía de EV formales | 02 |
+| f11 | Opinión sobre EV (entrevistas) | 03 |
+| f12 | Percepción por zona | 03 |
+| f13 | Marcas mencionadas / tipo observado | 03 |
+| f15 | Comparación de marcas por fuente | 04 |
+| f16 | Comparación de precios | 04 |
+| f17 | Composición por tipo y fuente | 04 |
+| f18 | Resumen informal (4 paneles) | 04 |
+| f19 | Resumen formal (2 paneles) | 04 |
+| f20 | Resumen entrevistas (4 paneles) | 04 |
+
+### Hallazgos principales
+
+1. **Hyundai domina** el mercado informal (19/30 anuncios, 63%).
+2. **Solo 3 de 30 anuncios** son vehículos eléctricos (10%).
+3. **83% de entrevistados** creen que predominan los autos clásicos.
+4. **87% de entrevistados** tienen opinión negativa sobre vehículos eléctricos.
+5. **Dongfeng (49 modelos)** y **BDC ONE (16 modelos)** son las únicas entidades con catálogo público.
+6. **Marcas chinas** (Dongfeng, Geely, Bestune, Foton) aparecen tanto en formal como en informal.
+7. **Brecha formal–informal**: precios en EUR (sin impuestos) vs USD; sin año-modelo en el formal.
+
+### Limitaciones encontradas
+
+- Muestra pequeña (30 anuncios, 30 entrevistas).
+- Entrevistas concentradas en Alamar (20 de 30).
+- Precios formales sin impuestos; 15 modelos sin precio público.
+- Sin año-modelo en catálogos formales.
+- Revolico como única plataforma informal.
+

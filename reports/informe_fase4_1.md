@@ -37,7 +37,7 @@ El enriquecimiento manual (precios EUR/MN y modelos poblados) está en **`mercad
 
 ### 2.2. Campos y grafías
 
-- El archivo manual usa `nivel_confidencia` (no `nivel_confiencia`, como figuraba en el diccionario y en un test). Se conservó la grafía manual y se adaptó la prueba para aceptar ambas.
+- El archivo manual usa `nivel_confianza` (no `nivel_confiencia`, como figuraba en el diccionario y en un test). Se conservó la grafía manual y se adaptó la prueba para aceptar ambas.
 - `DONGFENG_CUBA` sigue con `tipo_entidad: "otro"` aunque el crudo dice "Distribuidor oficial". **No se corrigió** (la auditoría lo dejó como recomendación).
 - `BDC_ONE` declara la marca **Mitsubishi**, pero su catálogo no muestra ningún modelo Mitsubishi. **Pendiente de verificar con la entidad.**
 
@@ -97,7 +97,7 @@ Detalle completo en `reports/catalogos_analisis_extra.md`.
 `data/processed/mercado_formal.json` se actualizó correctamente:
 
 - Se crearon copias de seguridad: `mercado_formal_backup_pre_fase4.1.json` y `mercado_formal_processed_backup_pre_fase4.1.json`.
-- Se conservaron **todas** las claves manuales, precios y `nivel_confidencia`.
+- Se conservaron **todas** las claves manuales, precios y `nivel_confianza`.
 - Se completaron `modelos_disponibles`, `tipos_vehiculos`, `vehiculos_electricos`, `precios` y `fuentes`.
 - Se añadió `enriquecimiento_catalogos` con fuente, fecha y valores previos (trazabilidad).
 - **No se eliminó ningún precio ni modelo manual.**
@@ -181,7 +181,7 @@ Pendiente / a tener en cuenta:
 | `docs/data_dictionary.md` | Esquemas de Revolico final, formal y catálogos |
 | `requirements.txt` | pandas, numpy, matplotlib, seaborn, jupyterlab, nbformat |
 | `tests/test_fase3_2_final.py` | `ano`, sin `nivel_confianza`, 30 registros |
-| `tests/test_fase3_data.py` | Acepta `nivel_confidencia`/`nivel_confiencia` |
+| `tests/test_fase3_data.py` | Acepta `nivel_confianza`/`nivel_confiencia` |
 
 **No modificados (verificado)**
 

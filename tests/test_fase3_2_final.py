@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-FINAL_PATH = PROJECT_ROOT / "data" / "processed" / "anuncios_revolico_final.json"
+FINAL_PATH = PROJECT_ROOT / "data" / "processed_final" / "anuncios_revolico_final.json"
 DESCARTES_FINAL_PATH = PROJECT_ROOT / "reports" / "anuncios_descartados_final.json"
 
 CAMPOS_FINALES = [

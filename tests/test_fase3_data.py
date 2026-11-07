@@ -5,7 +5,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 MERCADO_FORMAL_RAW = PROJECT_ROOT / "data" / "raw" / "mercado_formal.json"
-MERCADO_FORMAL_PROCESADO = PROJECT_ROOT / "data" / "processed" / "mercado_formal.json"
+MERCADO_FORMAL_PROCESADO = PROJECT_ROOT / "data" / "processed_final" / "mercado_formal_final.json"
 AMBIGUEDADES = PROJECT_ROOT / "reports" / "ambiguedades_revolico_update.json"
 RESUMEN_CALIDAD = PROJECT_ROOT / "reports" / "data_quality_summary.json"
 
@@ -41,9 +41,9 @@ def test_mercado_formal_procesado_valido():
     for registro in registros:
         for campo in campos_esenciales:
             assert campo in registro, f"Falta el campo '{campo}' en la entidad {registro.get('id_entidad')}"
-        # El archivo base manual usa 'nivel_confidencia'; se aceptan ambas grafias.
+        # El archivo base manual usa 'nivel_confianza'; se aceptan ambas grafias.
         assert (
-            "nivel_confidencia" in registro or "nivel_confiencia" in registro
+            "nivel_confianza" in registro or "nivel_confiencia" in registro
         ), f"Falta el nivel de confianza en la entidad {registro.get('id_entidad')}"
 
 

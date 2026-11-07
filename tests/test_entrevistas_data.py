@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-ENTREVISTAS_RAW = PROJECT_ROOT / "data" / "raw" / "entrevistas.json"
-ENTREVISTAS_PROCESADAS = PROJECT_ROOT / "data" / "processed" / "entrevistas.json"
+ENTREVISTAS_RAW = PROJECT_ROOT / "data" / "processed_final" / "entrevistas_final.json"
+ENTREVISTAS_PROCESADAS = PROJECT_ROOT / "data" / "processed_final" / "entrevistas_final.json"
 
 CAMPOS_ESSENTIALES = [
     "id_entrevista",
